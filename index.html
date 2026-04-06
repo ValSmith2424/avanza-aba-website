@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Avanza ABA — Center of Excellence for Autism. Compassionate, evidence-based ABA therapy for children, adults, and families in Arizona. Guiding growth. Elevating potential. Empowering lives."/>
+  <meta name="keywords" content="ABA therapy Arizona, autism therapy Phoenix, applied behavior analysis, ABA for kids, autism center Arizona, Avanza ABA"/>
+  <meta property="og:title" content="Avanza ABA | Center of Excellence for Autism"/>
+  <meta property="og:description" content="Compassionate, evidence-based ABA therapy rooted in family, progress, and community. Serving Arizona."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://avanzaaba.com/"/>
+  <title>Avanza ABA | Center of Excellence for Autism — Arizona ABA Therapy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/hero.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <style>
+    /* Back to top */
+    #backToTop {
+      position: fixed; bottom: 1.75rem; right: 1.75rem; z-index: 500;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--teal-dark); color: white; border: none;
+      font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transform: translateY(8px);
+      transition: opacity 0.3s, transform 0.3s, background 0.2s;
+      box-shadow: var(--shadow-md);
+    }
+    #backToTop.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
+    #backToTop:hover { background: var(--terra); }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/images/avanza-logo-horizontal.png" alt="Avanza ABA — Center of Excellence for Autism"/>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="about.html">About</a></li>
+      <li class="nav-item">
+        <a href="services.html">Services</a>
+        <div class="dropdown" role="menu">
+          <a href="services.html" role="menuitem">All Services</a>
+          <a href="what-is-aba.html" role="menuitem">What is ABA?</a>
+          <a href="aba-process.html" role="menuitem">Our ABA Process</a>
+          <div class="dropdown-divider"></div>
+          <a href="why-avanza.html" role="menuitem">Why Avanza?</a>
+        </div>
+      </li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="giving.html">Giving Back</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="intake.html" class="nav-cta">Start Your Journey</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="what-is-aba.html">What is ABA?</a>
+  <a href="aba-process.html">Our ABA Process</a>
+  <a href="why-avanza.html">Why Avanza?</a>
+  <a href="resources.html">Resources</a>
+  <a href="blog.html">Blog</a>
+  <a href="giving.html">Giving Back</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a>
+  <a href="intake.html" class="nav-cta">Start Your Journey →</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag reveal">✦ Center of Excellence for Autism</div>
+      <h1 class="reveal reveal-delay-1">
+        Guiding growth.<br/>
+        <em>Elevating potential.</em><br/>
+        <strong>Empowering lives.</strong>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        Avanza — Spanish for "to advance." We provide compassionate, evidence-based ABA therapy
+        for children, adults, and families across Arizona. Rooted in care. Growing with purpose.
+      </p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="intake.html" class="btn btn-secondary btn-lg">Start Your Journey →</a>
+        <a href="what-is-aba.html" class="btn btn-outline btn-lg">What is ABA?</a>
+      </div>
+      <div class="hero-trust reveal reveal-delay-4">
+        <div class="trust-item"><span>🛡️</span><span>HIPAA Compliant</span></div>
+        <div class="trust-item"><span>✓</span><span>BCBA Supervised</span></div>
+        <div class="trust-item"><span>❤️</span><span>Family Centered</span></div>
+        <div class="trust-item"><span>🌟</span><span>All Ages Welcome</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <!-- Floating deco puzzle pieces -->
+      <svg class="hero-piece" style="width:90px;top:-10px;left:-20px;opacity:0.18;--r:-14deg;--dur:11s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#5A9CB5"/></svg>
+      <svg class="hero-piece" style="width:70px;bottom:10px;left:10px;opacity:0.13;--r:162deg;--dur:14s;--delay:2s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#C4882A"/></svg>
+      <svg class="hero-piece" style="width:55px;top:20px;right:-10px;opacity:0.12;--r:38deg;--dur:9s;--delay:1s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#B8622A"/></svg>
+      <div class="hero-logo-wrap reveal reveal-delay-2">
+        <img src="assets/images/avanza-logo-hero.png" alt="Avanza ABA — Mountain, sun, family figures reaching up, with roots"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Stats Strip -->
+<div class="hero-stats" aria-label="Key statistics">
+  <div class="hero-stats-inner">
+    <div class="hero-stat">
+      <div class="hero-stat-num" data-counter data-target="100" data-suffix="%">100%</div>
+      <div class="hero-stat-label">Family Centered Care</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">BCBA</div>
+      <div class="hero-stat-label">Board Certified Analysts</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">All Ages</div>
+      <div class="hero-stat-label">Children, Teens &amp; Adults</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num" data-counter data-target="4" data-suffix="+">4+</div>
+      <div class="hero-stat-label">Service Settings</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">AZ</div>
+      <div class="hero-stat-label">Serving All Arizona</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ABOUT SNAPSHOT ── -->
+<section id="about" aria-label="About Avanza ABA">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <img src="assets/images/avanza-logo-stacked.png" alt="Avanza ABA logo — mountain, cactus, family, roots"/>
+      </div>
+      <div>
+        <span class="section-tag reveal">Who We Are</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Rooted in family.<br/><em>Built for progress.</em>
+        </h2>
+        <p class="section-sub reveal reveal-delay-2">
+          Avanza ABA is an Arizona-based Center of Excellence for Autism, offering Applied Behavior
+          Analysis therapy that is warm, individualized, and deeply family-centered. Our name —
+          Spanish for "to advance" — reflects our mission: every individual, every family, moving forward.
+        </p>
+        <div class="about-values">
+          <div class="value-item reveal reveal-delay-2">
+            <div class="value-dot"></div>
+            <div><h4>Warm &amp; Welcoming</h4><p>A practice where every family feels seen, heard, and genuinely supported from day one.</p></div>
+          </div>
+          <div class="value-item reveal reveal-delay-3">
+            <div class="value-dot"></div>
+            <div><h4>Evidence-Based Practice</h4><p>Every intervention grounded in Applied Behavior Analysis — proven, ethical, individualized.</p></div>
+          </div>
+          <div class="value-item reveal reveal-delay-3">
+            <div class="value-dot"></div>
+            <div><h4>Culturally Inclusive</h4><p>Honoring every background, language, and family structure — because progress is universal.</p></div>
+          </div>
+          <div class="value-item reveal reveal-delay-4">
+            <div class="value-dot"></div>
+            <div><h4>Community Rooted</h4><p>We are your neighbors — committed to Arizona families beyond the therapy room.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:2rem;" class="reveal reveal-delay-4">
+          <a href="about.html" class="btn btn-primary">Learn Our Story →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES OVERVIEW ── -->
+<section id="services" style="background:var(--bg-alt);" aria-label="Our services">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag reveal">What We Offer</span>
+      <h2 class="section-title reveal reveal-delay-1">Comprehensive ABA Services</h2>
+      <p class="section-sub reveal reveal-delay-2">Individualized treatment plans built around each person's unique strengths, goals, and family dynamic.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card card reveal">
+        <div class="icon-badge">🏠</div>
+        <h3>In-Home Therapy</h3>
+        <p>ABA therapy in the comfort of your home — naturalistic, low-stress, and focused on real-life skill building where it matters most.</p>
+        <a href="services.html#in-home" class="learn-more">Learn more →</a>
+      </div>
+      <div class="service-card card reveal reveal-delay-1">
+        <div class="icon-badge">🏥</div>
+        <h3>Clinic-Based Services</h3>
+        <p>Structured clinic sessions in a sensory-considerate environment designed for focus, growth, and peer interaction.</p>
+        <a href="services.html#clinic" class="learn-more">Learn more →</a>
+      </div>
+      <div class="service-card card reveal reveal-delay-2">
+        <div class="icon-badge">🏫</div>
+        <h3>School-Based Support</h3>
+        <p>Collaborative school programming that reinforces classroom success, social skills, and independence in educational settings.</p>
+        <a href="services.html#school" class="learn-more">Learn more →</a>
+      </div>
+      <div class="service-card card reveal reveal-delay-3">
+        <div class="icon-badge warm">👨‍👩‍👧</div>
+        <h3>Family Training</h3>
+        <p>Empowering parents and caregivers with practical strategies to extend progress beyond therapy sessions every day.</p>
+        <a href="services.html#family" class="learn-more">Learn more →</a>
+      </div>
+      <div class="service-card card reveal reveal-delay-4">
+        <div class="icon-badge warm">🧠</div>
+        <h3>Behavioral Assessments</h3>
+        <p>Comprehensive evaluations to understand each individual's needs, strengths, and goals — the foundation of every plan.</p>
+        <a href="services.html#assessment" class="learn-more">Learn more →</a>
+      </div>
+      <div class="service-card card reveal reveal-delay-4">
+        <div class="icon-badge gold">📋</div>
+        <h3>Insurance Navigation</h3>
+        <p>We help families understand coverage, verify benefits, and manage the administrative side so you can focus on what matters most.</p>
+        <a href="services.html#insurance" class="learn-more">Learn more →</a>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:2.5rem;">
+      <a href="services.html" class="btn btn-primary reveal">View All Services →</a>
+    </div>
+  </div>
+  <!-- deco -->
+  <svg class="deco" style="right:1%;top:5%;width:100px;opacity:0.06;--r:18deg;--dur:12s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#5A9CB5"/></svg>
+  <svg class="deco" style="left:0%;bottom:5%;width:80px;opacity:0.05;--r:205deg;--dur:15s;--delay:2s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#B8622A"/></svg>
+</section>
+
+<!-- ── HOW IT WORKS / PROCESS ── -->
+<section class="process-section" id="process" aria-label="How it works">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag reveal">How It Works</span>
+      <h2 class="section-title reveal reveal-delay-1">Your path to progress</h2>
+      <p class="section-sub reveal reveal-delay-2">Getting started with Avanza ABA is simple. We guide you every step of the way — from your first call through active therapy and beyond.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">1</div>
+        <h4>Free Consultation</h4>
+        <p>Connect with our team. We listen, answer questions, and learn about your family's goals — no pressure, no commitment.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-num">2</div>
+        <h4>Insurance Verification</h4>
+        <p>We verify your benefits, explain coverage, and handle authorization — at no cost to you.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-num">3</div>
+        <h4>Behavioral Assessment</h4>
+        <p>A BCBA conducts a comprehensive evaluation to understand your child's unique strengths and areas for growth.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-num">4</div>
+        <h4>Personalized Plan</h4>
+        <p>We build an individualized treatment plan collaboratively with your family — with clear, measurable goals.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-4">
+        <div class="step-num">5</div>
+        <h4>Therapy Begins</h4>
+        <p>Sessions start in your preferred setting — home, clinic, or school — with continuous progress monitoring.</p>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:3rem;">
+      <a href="aba-process.html" class="btn btn-outline reveal">See the Full Process →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── MISSION BAND ── -->
+<section class="mission-section" aria-label="Our mission">
+  <div class="container text-center">
+    <span class="section-tag reveal" style="color:var(--gold-light);background:rgba(196,136,42,0.2);">Our Purpose</span>
+    <h2 class="section-title reveal reveal-delay-1">Every family deserves to thrive</h2>
+    <p class="section-sub reveal reveal-delay-2">We believe every individual — regardless of age or ability — has the potential to grow. Avanza was built to make world-class behavioral health care accessible, warm, and deeply human.</p>
+    <div class="mission-stats">
+      <div class="mission-stat reveal">
+        <div class="mission-stat-num" data-counter data-target="100" data-suffix="%">100%</div>
+        <div class="mission-stat-label">Family Centered</div>
+      </div>
+      <div class="mission-stat reveal reveal-delay-1">
+        <div class="mission-stat-num">ABA</div>
+        <div class="mission-stat-label">Evidence Based</div>
+      </div>
+      <div class="mission-stat reveal reveal-delay-2">
+        <div class="mission-stat-num">All Ages</div>
+        <div class="mission-stat-label">Children to Adults</div>
+      </div>
+      <div class="mission-stat reveal reveal-delay-3">
+        <div class="mission-stat-num">BCBA</div>
+        <div class="mission-stat-label">Board Certified</div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;" class="reveal reveal-delay-4">
+      <a href="why-avanza.html" class="btn btn-outline-white">Why Choose Avanza? →</a>
+    </div>
+  </div>
+  <!-- deco -->
+  <svg class="deco" style="left:2%;top:10%;width:110px;opacity:0.07;--r:15deg;--dur:11s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="white"/></svg>
+  <svg class="deco" style="right:2%;bottom:8%;width:85px;opacity:0.06;--r:195deg;--dur:14s;--delay:1.5s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="white"/></svg>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials-section" id="testimonials" aria-label="Family testimonials">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag reveal">Families We've Served</span>
+      <h2 class="section-title reveal reveal-delay-1">Stories of <em>progress</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"From our very first session, we felt like family. Our son has made incredible strides and we finally have a team truly in our corner. Avanza changed everything."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MG</div>
+          <div><div class="testi-name">Maria G.</div><div class="testi-role">Parent of 7-year-old</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <p>"The home-based therapy changed everything for us. Our daughter is thriving in school and connecting with her peers in ways we never thought possible."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JT</div>
+          <div><div class="testi-name">James &amp; Tonya R.</div><div class="testi-role">Parents</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <p>"As an adult with autism, finding a program that respected my goals and autonomy was everything. Avanza truly gets it — they see the whole person."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">DM</div>
+          <div><div class="testi-name">Derek M.</div><div class="testi-role">Adult Client</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="deco" style="right:1%;top:8%;width:90px;opacity:0.06;--r:22deg;--dur:10s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#5A9CB5"/></svg>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section" id="faq" aria-label="Frequently asked questions">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag reveal">Got Questions?</span>
+      <h2 class="section-title reveal reveal-delay-1">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">What is ABA therapy?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Applied Behavior Analysis (ABA) is a scientifically validated approach to understanding behavior and how it's influenced by the environment. It's used to help individuals develop communication, social, and daily living skills while reducing challenging behaviors.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Who does Avanza ABA serve?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">We serve children, adolescents, adults, and their families. Our programs are designed for individuals with autism spectrum disorder (ASD), developmental delays, and related behavioral health needs — across all age ranges.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Do you accept insurance?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes. We work with many major insurance providers including AHCCCS/Medicaid, Blue Cross Blue Shield of AZ, Aetna, Cigna, UnitedHealthcare, and more. We verify your benefits before your first appointment at no cost to you.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Where do sessions take place?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">We offer in-home, clinic-based, school-based, and telehealth services depending on your individualized treatment plan. Many families use a combination of settings for the best outcomes.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">How do I get started?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Simply fill out our intake form online or give us a call. We'll schedule a free consultation to learn about your family's needs and walk you through next steps — no pressure, no commitment required.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">What makes Avanza different?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">We combine evidence-based ABA practice with a deeply family-centered, culturally inclusive approach. We see the whole person — not just the diagnosis. Every plan is personalized, every family is treated like our own.</div>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:2.5rem;">
+      <a href="resources.html" class="btn btn-outline reveal">More Resources →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── INTAKE FORMS BAND ── -->
+<section class="forms-band" aria-label="Patient intake forms">
+  <div class="container">
+    <div class="forms-band-inner">
+      <div class="forms-band-text reveal">
+        <div class="badge" style="margin-bottom:0.75rem;">🛡️ HIPAA Compliant</div>
+        <h2>Ready to begin? Complete your intake forms.</h2>
+        <p>Complete our secure patient intake forms from home before your first appointment — patient info, insurance, background, and all required consents with digital signature.</p>
+      </div>
+      <div class="reveal reveal-delay-2" style="flex-shrink:0;">
+        <a href="intake.html" class="btn btn-primary btn-lg">Complete Intake Forms →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact" style="background:var(--bg-dark);" aria-label="Contact us">
+  <div class="container">
+    <div style="margin-bottom:1rem;">
+      <span class="section-tag reveal" style="color:var(--teal-light);background:rgba(176,212,228,0.15);">Reach Out</span>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" style="color:white;">Start your journey today</h2>
+    <p class="section-sub reveal reveal-delay-2" style="color:var(--text-on-dark);">Fill out the form and we'll reach out within 24 hours to schedule your free consultation.</p>
+    <div class="contact-grid">
+      <form class="form-stack form-dark reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name <span class="req">*</span></label>
+            <input type="text" placeholder="Maria" required autocomplete="given-name"/>
+          </div>
+          <div class="form-field">
+            <label>Last Name <span class="req">*</span></label>
+            <input type="text" placeholder="Garcia" required autocomplete="family-name"/>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Email Address <span class="req">*</span></label>
+          <input type="email" placeholder="you@email.com" required autocomplete="email"/>
+        </div>
+        <div class="form-field">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(480) 555-0100" autocomplete="tel"/>
+        </div>
+        <div class="form-field">
+          <label>Who are you seeking services for?</label>
+          <select>
+            <option value="">Select...</option>
+            <option>My child (under 12)</option>
+            <option>My teenager (13–17)</option>
+            <option>An adult (18+)</option>
+            <option>Myself</option>
+            <option>Multiple family members</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Tell us about your needs</label>
+          <textarea placeholder="What brings you to Avanza? Any details help us prepare for your consultation..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;justify-content:center;">Request Free Consultation</button>
+      </form>
+      <div class="contact-info reveal reveal-delay-2">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div><h4>LOCATION</h4><p>Serving Greater Phoenix &amp; Arizona</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div><h4>PHONE</h4><p><a href="tel:4806523250" style="color:rgba(255,255,255,0.85);">(480) 652-3250</a></p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">✉️</div>
+          <div><h4>EMAIL</h4><p><a href="mailto:info@avanzaaba.com" style="color:rgba(255,255,255,0.85);">info@avanzaaba.com</a></p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🕐</div>
+          <div><h4>AVAILABILITY</h4><p>Mon–Fri 8am–6pm · Sat 9am–1pm</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🌐</div>
+          <div><h4>WEBSITE</h4><p>avanzaaba.com</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🛡️</div>
+          <div><h4>HIPAA COMPLIANT</h4><p>Your information is always private and protected.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="deco" style="right:1%;top:5%;width:110px;opacity:0.07;--r:22deg;--dur:10s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="white"/></svg>
+  <svg class="deco" style="left:1%;bottom:5%;width:80px;opacity:0.05;--r:195deg;--dur:13s;--delay:1.5s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="white"/></svg>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/avanza-logo-horizontal.png" alt="Avanza ABA"/>
+        <p>Center of Excellence for Autism. Evidence-based ABA therapy for children, adults, and families across Arizona. Rooted in care. Growing with purpose.</p>
+        <div style="display:flex;gap:0.75rem;margin-top:1.25rem;">
+          <a href="#" aria-label="Facebook" style="color:rgba(255,255,255,0.5);font-size:1.2rem;transition:color 0.2s;" onmouseover="this.style.color='#B0D4E4'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">𝒻</a>
+          <a href="#" aria-label="Instagram" style="color:rgba(255,255,255,0.5);font-size:1.2rem;transition:color 0.2s;" onmouseover="this.style.color='#B0D4E4'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">◈</a>
+          <a href="#" aria-label="LinkedIn" style="color:rgba(255,255,255,0.5);font-size:1.2rem;transition:color 0.2s;" onmouseover="this.style.color='#B0D4E4'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">𝓁</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#in-home">In-Home Therapy</a></li>
+          <li><a href="services.html#clinic">Clinic-Based</a></li>
+          <li><a href="services.html#school">School Support</a></li>
+          <li><a href="services.html#family">Family Training</a></li>
+          <li><a href="services.html#assessment">Assessments</a></li>
+          <li><a href="services.html#insurance">Insurance Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="what-is-aba.html">What is ABA?</a></li>
+          <li><a href="aba-process.html">Our Process</a></li>
+          <li><a href="why-avanza.html">Why Avanza?</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="giving.html">Giving Back</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="intake.html">Patient Forms</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> Avanza ABA — Center of Excellence for Autism. All Rights Reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">HIPAA Notice</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="js/nav.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* ============================================================
+   AVANZA ABA — Navigation CSS
+   ============================================================ */
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 70px; display: flex; align-items: center;
+  background: rgba(248,244,238,0.96); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--trans), background var(--trans);
+}
+nav.scrolled {
+  box-shadow: 0 4px 24px rgba(42,28,20,0.10);
+}
+
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+}
+
+/* Brand */
+.nav-brand img { height: 44px; width: auto; object-fit: contain; display: block; }
+
+/* Links */
+.nav-links {
+  display: flex; align-items: center; gap: 0.25rem;
+}
+.nav-links a {
+  font-size: 0.83rem; font-weight: 500; color: var(--text-muted);
+  padding: 0.45rem 0.85rem; border-radius: var(--radius-full);
+  letter-spacing: 0.02em; transition: color var(--trans), background var(--trans);
+}
+.nav-links a:hover { color: var(--teal-dark); background: var(--teal-light); }
+.nav-links a.active { color: var(--teal-dark); }
+
+/* Dropdown */
+.nav-item { position: relative; }
+.nav-item > a { display: flex; align-items: center; gap: 0.3rem; }
+.nav-item > a::after { content: '▾'; font-size: 0.65rem; opacity: 0.55; }
+.dropdown {
+  position: absolute; top: calc(100% + 10px); left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 0.6rem;
+  min-width: 210px; box-shadow: var(--shadow-lg);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.nav-item:hover .dropdown {
+  opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(0);
+}
+.dropdown a {
+  display: block; padding: 0.6rem 0.9rem; font-size: 0.84rem;
+  color: var(--text-muted); border-radius: var(--radius-sm);
+  transition: background var(--trans), color var(--trans);
+}
+.dropdown a:hover { background: var(--bg); color: var(--teal-dark); }
+.dropdown-divider { height: 1px; background: var(--border); margin: 0.4rem 0; }
+
+/* CTA button */
+.nav-cta {
+  background: var(--terra); color: var(--white) !important;
+  padding: 0.55rem 1.3rem !important; border-radius: var(--radius-full);
+  font-size: 0.82rem !important; font-weight: 500;
+  transition: background var(--trans), transform var(--trans), box-shadow var(--trans) !important;
+}
+.nav-cta:hover {
+  background: #9A4E20 !important; transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(184,98,42,0.3) !important;
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.nav-hamburger span {
+  width: 22px; height: 2px; background: var(--teal-dark);
+  border-radius: 2px; transition: all 0.3s var(--ease); display: block;
+}
+.nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Mobile menu */
+.nav-mobile {
+  display: none; position: fixed;
+  top: 70px; left: 0; right: 0;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem 2rem; z-index: 999;
+  flex-direction: column; gap: 0.25rem;
+  box-shadow: var(--shadow-md);
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile a {
+  font-size: 1rem; font-weight: 500; color: var(--text);
+  padding: 0.75rem 1rem; border-radius: var(--radius-sm);
+  border-bottom: 1px solid var(--border); transition: color var(--trans);
+}
+.nav-mobile a:last-child { border-bottom: none; }
+.nav-mobile a:hover { color: var(--teal-dark); }
+.nav-mobile .nav-cta {
+  margin-top: 0.75rem; text-align: center; display: block;
+  background: var(--terra) !important; color: var(--white) !important;
+}

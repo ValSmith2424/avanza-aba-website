@@ -1,0 +1,98 @@
+/* ============================================================
+   AVANZA ABA — Hero CSS
+   ============================================================ */
+
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding: 100px 0 4rem;
+  background: linear-gradient(140deg, var(--bg) 0%, #EDE0CC 55%, var(--bg) 100%);
+  position: relative; overflow: hidden;
+}
+
+/* Soft radial glow behind logo */
+.hero::before {
+  content: ''; position: absolute;
+  right: 0; top: 0; width: 55%; height: 100%;
+  background: radial-gradient(ellipse at 65% 45%, rgba(176,212,228,0.35) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 4rem;
+  max-width: 1160px; margin: 0 auto; padding: 0 2rem;
+  position: relative; z-index: 1;
+}
+
+/* Content side */
+.hero-content {}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.72rem; letter-spacing: 0.18em; font-weight: 600;
+  text-transform: uppercase; color: var(--teal-dark);
+  background: var(--teal-light); padding: 0.35rem 1rem;
+  border-radius: var(--radius-full); margin-bottom: 1.75rem;
+}
+.hero h1 { color: var(--text); margin-bottom: 1.25rem; }
+.hero h1 em { font-style: italic; color: var(--terra); }
+.hero h1 strong { color: var(--teal-dark); font-weight: 700; }
+.hero-sub {
+  font-size: 1rem; line-height: 1.8; color: var(--text-muted);
+  margin-bottom: 2.25rem; max-width: 480px; font-weight: 300;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.hero-trust {
+  margin-top: 2.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;
+  padding-top: 2rem; border-top: 1px solid var(--border);
+}
+.trust-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.78rem; color: var(--text-muted); font-weight: 500;
+}
+.trust-item span:first-child { color: var(--teal); font-size: 1rem; }
+
+/* Visual side */
+.hero-visual {
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.hero-logo-wrap {
+  position: relative; z-index: 1;
+  animation: heroFloat 7s ease-in-out infinite;
+}
+.hero-logo-wrap img {
+  width: 100%; max-width: 420px; height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 48px rgba(42,28,20,0.16));
+}
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+
+/* Scatter puzzle pieces behind logo */
+.hero-piece {
+  position: absolute; pointer-events: none;
+  animation: decoFloat var(--dur, 11s) ease-in-out var(--delay, 0s) infinite;
+  z-index: 0;
+}
+
+/* ── HERO STATS STRIP ── */
+.hero-stats {
+  background: var(--teal-dark); color: var(--white);
+  padding: 2rem 0;
+}
+.hero-stats-inner {
+  display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1.5rem;
+  max-width: 1160px; margin: 0 auto; padding: 0 2rem;
+}
+.hero-stat { text-align: center; }
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem; font-weight: 600; color: var(--gold-light);
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 0.74rem; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.65); margin-top: 0.35rem;
+}

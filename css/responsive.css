@@ -1,0 +1,99 @@
+/* ============================================================
+   AVANZA ABA — Responsive CSS
+   Breakpoints: 1100px, 900px, 640px, 400px
+   ============================================================ */
+
+/* ── 1100px — reduce grid gaps ── */
+@media (max-width: 1100px) {
+  .hero-inner { gap: 2.5rem; }
+  .hero-logo-wrap img { max-width: 340px; }
+  .about-grid { gap: 3rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+/* ── 900px — switch to single column ── */
+@media (max-width: 900px) {
+  section { padding: 4rem 0; }
+
+  /* Nav */
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* Hero */
+  .hero { min-height: auto; padding: 90px 0 3rem; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+  .hero-content { order: 2; }
+  .hero-visual { order: 1; }
+  .hero-logo-wrap img { max-width: 280px; }
+  .hero-sub { margin: 0 auto 2rem; }
+  .hero-actions { justify-content: center; }
+  .hero-trust { justify-content: center; }
+  .hero-piece { display: none; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-visual { min-height: 260px; }
+
+  /* Process */
+  .process-steps::before { display: none; }
+  .process-steps {
+    grid-template-columns: 1fr 1fr; gap: 2rem;
+  }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  /* Forms band */
+  .forms-band-inner { flex-direction: column; text-align: center; }
+
+  /* Career */
+  .career-item {
+    flex-direction: column; align-items: flex-start; gap: 1rem;
+  }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-brand p { max-width: 100%; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-legal { justify-content: center; }
+}
+
+/* ── 640px — mobile ── */
+@media (max-width: 640px) {
+  .container, .container-narrow { padding: 0 1.25rem; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.75rem; }
+
+  /* Hero stats */
+  .hero-stats-inner { gap: 1rem; }
+  .hero-stat-num { font-size: 1.9rem; }
+
+  /* Process */
+  .process-steps { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* Form */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* CTA */
+  .cta-band .btn-group { flex-direction: column; align-items: center; }
+
+  /* Blog */
+  .blog-grid { grid-template-columns: 1fr; }
+
+  /* Mission stats */
+  .mission-stats { gap: 1.5rem; }
+}
+
+/* ── 400px — small phones ── */
+@media (max-width: 400px) {
+  h1 { font-size: 1.9rem; }
+  .btn-lg { padding: 0.85rem 1.6rem; font-size: 0.88rem; }
+  .hero-trust { gap: 1rem; }
+}
+
+/* ── Print ── */
+@media print {
+  nav, .nav-mobile, .hero-piece, .deco, footer { display: none !important; }
+  .page-hero { padding: 2rem 0; }
+  body { background: white; }
+}
