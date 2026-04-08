@@ -26,12 +26,12 @@ nav.scrolled {
   display: flex; align-items: center; gap: 0.25rem;
 }
 .nav-links a {
-  font-size: 0.83rem; font-weight: 500; color: var(--text-muted);
+  font-size: 0.83rem; font-weight: 500; color: var(--terra);
   padding: 0.45rem 0.85rem; border-radius: var(--radius-full);
   letter-spacing: 0.02em; transition: color var(--trans), background var(--trans);
 }
-.nav-links a:hover { color: var(--teal-dark); background: var(--teal-light); }
-.nav-links a.active { color: var(--teal-dark); }
+.nav-links a:hover { color: var(--terra); background: var(--terra-light); }
+.nav-links a.active { color: var(--terra); }
 
 /* Dropdown */
 .nav-item { position: relative; }
