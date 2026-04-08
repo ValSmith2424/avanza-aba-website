@@ -197,7 +197,7 @@ section { padding: 5rem 0; position: relative; overflow: hidden; }
   font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 1.5rem;
 }
 .page-hero .breadcrumb a { color: var(--teal-light); }
-.page-hero .breadcrumb span { color: rgba(255,255,255,0.85); }
+.page-hero .breadcrumb span { color: var(--terra-light); }
 
 /* ── SCROLL REVEAL (JS adds .revealed) ── */
 .reveal {
