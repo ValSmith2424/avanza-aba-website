@@ -4,7 +4,7 @@
 
 .hero {
   min-height: 100vh; display: flex; align-items: center;
-  padding: 100px 0 4rem;
+  padding: 3rem 0 4rem;
   background: linear-gradient(140deg, var(--bg) 0%, #EDE0CC 55%, var(--bg) 100%);
   position: relative; overflow: hidden;
 }

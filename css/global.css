@@ -54,6 +54,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 70px;
 }
 img, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -187,7 +188,7 @@ section { padding: 5rem 0; position: relative; overflow: hidden; }
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
   background: linear-gradient(135deg, var(--teal-dark) 0%, #2A5870 100%);
-  color: var(--white); padding: 7rem 0 4rem; text-align: center;
+  color: var(--white); padding: 4rem 0 4rem; text-align: center;
 }
 .page-hero h1 { color: var(--white); margin-bottom: 0.75rem; }
 .page-hero p { color: var(--text-on-dark); max-width: 580px; margin: 0 auto 1.5rem; font-size: 1rem; }
