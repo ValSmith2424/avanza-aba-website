@@ -191,13 +191,14 @@ section { padding: 5rem 0; position: relative; overflow: hidden; }
   color: var(--white); padding: 4rem 0 4rem; text-align: center;
 }
 .page-hero h1 { color: var(--white); margin-bottom: 0.75rem; }
-.page-hero p { color: var(--text-on-dark); max-width: 580px; margin: 0 auto 1.5rem; font-size: 1rem; }
+.page-hero p { color: var(--white); max-width: 580px; margin: 0 auto 1.5rem; font-size: 1rem; }
 .page-hero .breadcrumb {
   display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-  font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 1.5rem;
+  font-size: 0.78rem; color: rgba(209,71,7,0.9); margin-bottom: 1.5rem;
 }
-.page-hero .breadcrumb a { color: var(--teal-light); }
-.page-hero .breadcrumb span { color: var(--terra-light); }
+.page-hero .breadcrumb a { color: rgba(209,71,7,1); }
+.page-hero .breadcrumb a:hover { color: #1a1a1a; }
+.page-hero .breadcrumb span { color: #1a5276; }
 
 /* ── SCROLL REVEAL (JS adds .revealed) ── */
 .reveal {

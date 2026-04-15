@@ -203,6 +203,7 @@
 }
 .form-dark .form-field input::placeholder,
 .form-dark .form-field textarea::placeholder { color: rgba(255,255,255,0.3); }
+.form-dark .form-field select option { background: #1a1a1a; color: var(--white); }
 .form-dark .form-field input:focus,
 .form-dark .form-field textarea:focus {
   border-color: var(--teal-light);

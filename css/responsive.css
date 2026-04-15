@@ -16,7 +16,7 @@
   section { padding: 4rem 0; }
 
   /* Nav */
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .nav-portal { display: none; }
   .nav-hamburger { display: flex; }
 
   /* Hero */

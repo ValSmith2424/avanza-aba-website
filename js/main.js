@@ -4,6 +4,31 @@
    ============================================================ */
 
 (function () {
+  // ── LANGUAGE AUTO-DETECTION ────────────────────────────────
+  // On first visit with no saved preference, redirect Spanish-language
+  // browsers to the /es/ version. Respects manual EN↔ES switches.
+  (function detectLang() {
+    const isEsPage = window.location.pathname.includes('/es/');
+    const savedPref = localStorage.getItem('avanza-lang');
+
+    if (!isEsPage && !savedPref) {
+      const lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.startsWith('es')) {
+        const page = window.location.pathname.replace(/^\//, '').split('/').pop() || 'index.html';
+        window.location.replace('/es/' + (page || 'index.html'));
+        return;
+      }
+    }
+
+    // Save preference when user manually clicks the language switcher
+    document.querySelectorAll('.nav-lang a, .nav-lang-mobile a').forEach(link => {
+      link.addEventListener('click', () => {
+        const href = link.getAttribute('href') || '';
+        localStorage.setItem('avanza-lang', (href.includes('/es/') || href.startsWith('es/')) ? 'es' : 'en');
+      });
+    });
+  })();
+
   // ── SMOOTH ANCHOR SCROLL (offset for fixed nav) ────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
