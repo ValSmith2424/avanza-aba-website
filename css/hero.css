@@ -5,7 +5,7 @@
 .hero {
   min-height: 100vh; display: flex; align-items: center;
   padding: 3rem 0 4rem;
-  background: linear-gradient(140deg, var(--bg) 0%, #EDE0CC 55%, var(--bg) 100%);
+  background: linear-gradient(140deg, #F5FDFC 0%, #D8F5EE 40%, #D2EDFA 70%, #F5FDFC 100%);
   position: relative; overflow: hidden;
 }
 
@@ -13,7 +13,14 @@
 .hero::before {
   content: ''; position: absolute;
   right: 0; top: 0; width: 55%; height: 100%;
-  background: radial-gradient(ellipse at 65% 45%, rgba(176,212,228,0.35) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 65% 45%, rgba(61,217,179,0.22) 0%, rgba(72,184,232,0.18) 45%, transparent 70%);
+  pointer-events: none;
+}
+/* Left side accent glow */
+.hero::after {
+  content: ''; position: absolute;
+  left: 0; bottom: 0; width: 40%; height: 60%;
+  background: radial-gradient(ellipse at 20% 80%, rgba(45,112,176,0.10) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -79,8 +86,14 @@
 
 /* ── HERO STATS STRIP ── */
 .hero-stats {
-  background: var(--teal-dark); color: var(--white);
+  background: linear-gradient(135deg, #1BAF8A 0%, #48B8E8 50%, #2D70B0 100%);
+  color: var(--white);
   padding: 2rem 0;
+  position: relative;
+}
+.hero-stats::before {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.06); pointer-events: none;
 }
 .hero-stats-inner {
   display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1.5rem;
@@ -89,7 +102,7 @@
 .hero-stat { text-align: center; }
 .hero-stat-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.4rem; font-weight: 600; color: var(--gold-light);
+  font-size: 2.4rem; font-weight: 600; color: #ffffff;
   line-height: 1;
 }
 .hero-stat-label {

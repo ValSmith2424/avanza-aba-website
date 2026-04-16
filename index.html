@@ -41,7 +41,7 @@
 <nav id="mainNav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/avanza-logo-horizontal.png" alt="Avanza ABA — Center of Excellence for Autism"/>
+      <img src="assets/images/logo.png" alt="Avanza ABA — Center of Excellence for Autism"/>
     </a>
     <ul class="nav-links" role="list">
       <li><a href="about.html">About</a></li>
@@ -110,11 +110,11 @@
     </div>
     <div class="hero-visual">
       <!-- Floating deco puzzle pieces -->
-      <svg class="hero-piece" style="width:90px;top:-10px;left:-20px;opacity:0.18;--r:-14deg;--dur:11s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#5A9CB5"/></svg>
-      <svg class="hero-piece" style="width:70px;bottom:10px;left:10px;opacity:0.13;--r:162deg;--dur:14s;--delay:2s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#C4882A"/></svg>
-      <svg class="hero-piece" style="width:55px;top:20px;right:-10px;opacity:0.12;--r:38deg;--dur:9s;--delay:1s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#B8622A"/></svg>
+      <svg class="hero-piece" style="width:90px;top:-10px;left:-20px;opacity:0.18;--r:-14deg;--dur:11s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#3DD9B3"/></svg>
+      <svg class="hero-piece" style="width:70px;bottom:10px;left:10px;opacity:0.13;--r:162deg;--dur:14s;--delay:2s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#48B8E8"/></svg>
+      <svg class="hero-piece" style="width:55px;top:20px;right:-10px;opacity:0.12;--r:38deg;--dur:9s;--delay:1s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#2D70B0"/></svg>
       <div class="hero-logo-wrap reveal reveal-delay-2">
-        <img src="assets/images/avanza-logo-hero.png" alt="Avanza ABA — Mountain, sun, family figures reaching up, with roots"/>
+        <img src="assets/images/logo.png" alt="Avanza ABA — Center of Excellence for Autism logo"/>
       </div>
     </div>
   </div>
@@ -151,7 +151,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-visual reveal">
-        <img src="assets/images/avanza-logo-stacked.png" alt="Avanza ABA logo — mountain, cactus, family, roots"/>
+        <img src="assets/images/family1.PNG" alt="Avanza ABA — a family supported through therapy" style="object-fit:cover;border-radius:var(--radius-lg);width:100%;max-height:380px;"/>
       </div>
       <div>
         <span class="section-tag reveal">Who We Are</span>
@@ -318,6 +318,64 @@
   <svg class="deco" style="right:2%;bottom:8%;width:85px;opacity:0.06;--r:195deg;--dur:14s;--delay:1.5s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="white"/></svg>
 </section>
 
+<!-- ── PHOTO GALLERY ── -->
+<section aria-label="Our community" style="padding:0;overflow:hidden;">
+  <div class="photo-gallery-strip">
+    <div class="pg-item pg-item--wide">
+      <img src="assets/images/theropy-session.PNG" alt="ABA therapy session at Avanza ABA"/>
+      <div class="pg-caption">Compassionate, personalized therapy sessions</div>
+    </div>
+    <div class="pg-item">
+      <img src="assets/images/caring-hands.PNG" alt="Caring hands — Avanza ABA therapist"/>
+      <div class="pg-caption">Building trust, one connection at a time</div>
+    </div>
+    <div class="pg-item">
+      <img src="assets/images/avanzaoffice.png" alt="Avanza ABA office — welcoming clinic environment"/>
+      <div class="pg-caption">A welcoming space designed for growth</div>
+    </div>
+  </div>
+  <style>
+    .photo-gallery-strip {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      height: 380px;
+    }
+    .pg-item {
+      position: relative; overflow: hidden;
+    }
+    .pg-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+      display: block;
+    }
+    .pg-item:hover img { transform: scale(1.05); }
+    .pg-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(26,78,128,0.82) 0%, transparent 100%);
+      color: white; font-size: 0.78rem; font-weight: 500;
+      padding: 1.5rem 1.2rem 0.85rem;
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .pg-item:hover .pg-caption { opacity: 1; }
+    .pg-item--wide::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(61,217,179,0.12) 0%, rgba(45,112,176,0.10) 100%);
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .photo-gallery-strip {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .pg-item--wide { grid-column: 1 / -1; height: 240px; }
+      .pg-item { height: 180px; }
+      .pg-caption { opacity: 1; }
+    }
+  </style>
+</section>
+
 <!-- ── TESTIMONIALS ── -->
 <section class="testimonials-section" id="testimonials" aria-label="Family testimonials">
   <div class="container">
@@ -411,7 +469,7 @@
 </section>
 
 <!-- ── CONTACT ── -->
-<section id="contact" style="background:var(--bg-dark);" aria-label="Contact us">
+<section id="contact" style="background:linear-gradient(135deg,#1BAF8A 0%,#2490C4 45%,#1A4E80 100%);" aria-label="Contact us">
   <div class="container">
     <div style="margin-bottom:1rem;">
       <span class="section-tag reveal" style="color:var(--teal-light);background:rgba(176,212,228,0.15);">Reach Out</span>
@@ -492,7 +550,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/images/avanza-logo-horizontal.png" alt="Avanza ABA"/>
+        <img src="assets/images/logo.png" alt="Avanza ABA"/>
         <p>Center of Excellence for Autism. Evidence-based ABA therapy for children, adults, and families across Arizona. Rooted in care. Growing with purpose.</p>
         <div style="display:flex;gap:0.75rem;margin-top:1.25rem;">
           <a href="#" aria-label="Facebook" style="color:rgba(255,255,255,0.5);font-size:1.2rem;transition:color 0.2s;" onmouseover="this.style.color='#B0D4E4'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">𝒻</a>
