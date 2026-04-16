@@ -7,11 +7,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Avanza ABA — Center of Excellence for Autism. Compassionate, evidence-based ABA therapy for children, adults, and families in Arizona. Guiding growth. Elevating potential. Empowering lives."/>
   <meta name="keywords" content="ABA therapy Arizona, autism therapy Phoenix, applied behavior analysis, ABA for kids, autism center Arizona, Avanza ABA"/>
-  <meta property="og:title" content="Avanza ABA | Center of Excellence for Autism"/>
-  <meta property="og:description" content="Compassionate, evidence-based ABA therapy rooted in family, progress, and community. Serving Arizona."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://avanzaaba.com/"/>
   <title>Avanza ABA | Center of Excellence for Autism — Arizona ABA Therapy</title>
+  <link rel="canonical" href="https://avanzatherapyaz.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Avanza ABA"/>
+  <meta property="og:url" content="https://avanzatherapyaz.com/"/>
+  <meta property="og:title" content="Avanza ABA | Center of Excellence for Autism — Arizona"/>
+  <meta property="og:description" content="Compassionate, evidence-based ABA therapy for children, adults, and families in Arizona. No waitlist. Bilingual. BCBA-supervised."/>
+  <meta property="og:image" content="https://avanzatherapyaz.com/assets/images/logo.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@AvanzaABA"/>
+  <meta name="twitter:title" content="Avanza ABA | Center of Excellence for Autism — Arizona"/>
+  <meta name="twitter:description" content="Compassionate, evidence-based ABA therapy for children, adults, and families in Arizona. No waitlist. Bilingual. BCBA-supervised."/>
+  <meta name="twitter:image" content="https://avanzatherapyaz.com/assets/images/logo.png"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": "https://avanzatherapyaz.com",
+    "name": "Avanza ABA",
+    "alternateName": "Avanza ABA Center of Excellence for Autism",
+    "description": "Compassionate, evidence-based ABA therapy for children, adults, and families across Arizona.",
+    "url": "https://avanzatherapyaz.com",
+    "telephone": "+14806523250",
+    "email": "info@avanzatherapyaz.com",
+    "areaServed": "Arizona",
+    "address": {"@type": "PostalAddress", "addressRegion": "AZ", "addressCountry": "US"},
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00"}
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -478,27 +505,33 @@
     <p class="section-sub reveal reveal-delay-2" style="color:var(--text-on-dark);">Fill out the form and we'll reach out within 24 hours to schedule your free consultation.</p>
     <div class="contact-grid">
       <form class="form-stack form-dark reveal" id="contactForm" novalidate>
+        <!-- Web3Forms hidden fields -->
+        <input type="hidden" name="access_key" value="AVANZA_WEB3FORMS_KEY"/>
+        <input type="hidden" name="subject" value="New Consultation Request — Avanza ABA Website"/>
+        <input type="hidden" name="from_name" value="Avanza ABA Website"/>
+        <input type="hidden" name="redirect" value="false"/>
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off"/>
         <div class="form-row">
           <div class="form-field">
             <label>First Name <span class="req">*</span></label>
-            <input type="text" placeholder="Maria" required autocomplete="given-name"/>
+            <input type="text" name="first_name" placeholder="Maria" required autocomplete="given-name"/>
           </div>
           <div class="form-field">
             <label>Last Name <span class="req">*</span></label>
-            <input type="text" placeholder="Garcia" required autocomplete="family-name"/>
+            <input type="text" name="last_name" placeholder="Garcia" required autocomplete="family-name"/>
           </div>
         </div>
         <div class="form-field">
           <label>Email Address <span class="req">*</span></label>
-          <input type="email" placeholder="you@email.com" required autocomplete="email"/>
+          <input type="email" name="email" placeholder="you@email.com" required autocomplete="email"/>
         </div>
         <div class="form-field">
           <label>Phone Number</label>
-          <input type="tel" placeholder="(480) 555-0100" autocomplete="tel"/>
+          <input type="tel" name="phone" placeholder="(480) 555-0100" autocomplete="tel"/>
         </div>
         <div class="form-field">
           <label>Who are you seeking services for?</label>
-          <select>
+          <select name="service_for">
             <option value="">Select...</option>
             <option>My child (under 12)</option>
             <option>My teenager (13–17)</option>
@@ -509,7 +542,7 @@
         </div>
         <div class="form-field">
           <label>Tell us about your needs</label>
-          <textarea placeholder="What brings you to Avanza? Any details help us prepare for your consultation..."></textarea>
+          <textarea name="message" placeholder="What brings you to Avanza? Any details help us prepare for your consultation..."></textarea>
         </div>
         <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;justify-content:center;">Request Free Consultation</button>
       </form>
@@ -524,7 +557,7 @@
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">✉️</div>
-          <div><h4>EMAIL</h4><p><a href="mailto:info@avanzaaba.com" style="color:rgba(255,255,255,0.85);">info@avanzaaba.com</a></p></div>
+          <div><h4>EMAIL</h4><p><a href="mailto:info@avanzatherapyaz.com" style="color:rgba(255,255,255,0.85);">info@avanzatherapyaz.com</a></p></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">🕐</div>
@@ -532,7 +565,7 @@
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">🌐</div>
-          <div><h4>WEBSITE</h4><p>avanzaaba.com</p></div>
+          <div><h4>WEBSITE</h4><p>avanzatherapyaz.com</p></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">🛡️</div>

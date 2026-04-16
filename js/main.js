@@ -41,22 +41,49 @@
     });
   });
 
-  // ── CONTACT FORM HANDLER ───────────────────────────────────
+  // ── CONTACT FORM HANDLER (Web3Forms → info@avanzatherapyaz.com) ──
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', e => {
+    contactForm.addEventListener('submit', async e => {
       e.preventDefault();
       const btn = contactForm.querySelector('[type="submit"]');
-      btn.textContent = 'Message Sent! ✓';
+      const originalText = btn.textContent;
+
+      btn.textContent = 'Sending…';
       btn.disabled = true;
-      btn.style.background = '#5A9CB5';
-      // Reset after 4s
-      setTimeout(() => {
-        btn.textContent = 'Send Message';
+
+      const data = new FormData(contactForm);
+      data.append('access_key', 'AVANZA_WEB3FORMS_KEY');
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: data
+        });
+        const json = await res.json();
+
+        if (json.success) {
+          btn.textContent = 'Message Sent! ✓';
+          btn.style.background = 'linear-gradient(135deg,#1BAF8A,#48B8E8)';
+          contactForm.reset();
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+          }, 5000);
+        } else {
+          throw new Error(json.message || 'Submission failed');
+        }
+      } catch (err) {
+        btn.textContent = 'Error — please try again';
+        btn.style.background = '#c0392b';
         btn.disabled = false;
-        btn.style.background = '';
-        contactForm.reset();
-      }, 4000);
+        console.error('Form error:', err);
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+        }, 4000);
+      }
     });
   }
 

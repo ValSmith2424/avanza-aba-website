@@ -7,6 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Contact Avanza ABA — schedule a free consultation, verify insurance, or ask questions about ABA therapy in Arizona. We respond within 24 hours."/>
   <title>Contact Us | Avanza ABA — Arizona ABA Therapy</title>
+  <link rel="canonical" href="https://avanzatherapyaz.com/contact.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Avanza ABA"/>
+  <meta property="og:url" content="https://avanzatherapyaz.com/contact.html"/>
+  <meta property="og:title" content="Contact Avanza ABA | Free Consultation — Arizona"/>
+  <meta property="og:description" content="Contact Avanza ABA to schedule your free consultation, verify insurance, or ask about ABA therapy services in Arizona."/>
+  <meta property="og:image" content="https://avanzatherapyaz.com/assets/images/logo.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@AvanzaABA"/>
+  <meta name="twitter:title" content="Contact Avanza ABA | Free Consultation — Arizona"/>
+  <meta name="twitter:description" content="Contact Avanza ABA to schedule your free consultation, verify insurance, or ask about ABA therapy services in Arizona."/>
+  <meta name="twitter:image" content="https://avanzatherapyaz.com/assets/images/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/global.css"/>
@@ -73,16 +85,22 @@
   <div class="container">
     <div class="contact-grid">
       <form class="form-stack form-dark reveal" id="contactForm" novalidate>
+        <!-- Web3Forms hidden fields -->
+        <input type="hidden" name="access_key" value="AVANZA_WEB3FORMS_KEY"/>
+        <input type="hidden" name="subject" value="New Contact Form Submission — Avanza ABA"/>
+        <input type="hidden" name="from_name" value="Avanza ABA Website"/>
+        <input type="hidden" name="redirect" value="false"/>
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off"/>
         <h3 style="color:white;font-family:'Cormorant Garamond',serif;font-weight:500;margin-bottom:1.5rem;">Send us a message</h3>
         <div class="form-row">
-          <div class="form-field"><label>First Name <span class="req">*</span></label><input type="text" placeholder="Maria" required autocomplete="given-name"/></div>
-          <div class="form-field"><label>Last Name <span class="req">*</span></label><input type="text" placeholder="Garcia" required autocomplete="family-name"/></div>
+          <div class="form-field"><label>First Name <span class="req">*</span></label><input type="text" name="first_name" placeholder="Maria" required autocomplete="given-name"/></div>
+          <div class="form-field"><label>Last Name <span class="req">*</span></label><input type="text" name="last_name" placeholder="Garcia" required autocomplete="family-name"/></div>
         </div>
-        <div class="form-field"><label>Email <span class="req">*</span></label><input type="email" placeholder="you@email.com" required autocomplete="email"/></div>
-        <div class="form-field"><label>Phone</label><input type="tel" placeholder="(480) 555-0100" autocomplete="tel"/></div>
+        <div class="form-field"><label>Email <span class="req">*</span></label><input type="email" name="email" placeholder="you@email.com" required autocomplete="email"/></div>
+        <div class="form-field"><label>Phone</label><input type="tel" name="phone" placeholder="(480) 555-0100" autocomplete="tel"/></div>
         <div class="form-field">
           <label>Reason for Contact</label>
-          <select>
+          <select name="reason">
             <option value="">Select...</option>
             <option>Schedule a free consultation</option>
             <option>Insurance / benefits question</option>
@@ -93,13 +111,13 @@
           </select>
         </div>
         <div class="form-field"><label>Who are you seeking services for?</label>
-          <select>
+          <select name="service_for">
             <option value="">Select...</option>
             <option>My child (under 12)</option><option>My teenager (13–17)</option>
             <option>An adult (18+)</option><option>Myself</option><option>Multiple family members</option>
           </select>
         </div>
-        <div class="form-field"><label>Message</label><textarea placeholder="Tell us about your needs, questions, or how we can help..."></textarea></div>
+        <div class="form-field"><label>Message</label><textarea name="message" placeholder="Tell us about your needs, questions, or how we can help..."></textarea></div>
         <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;justify-content:center;">Send Message</button>
         <p style="font-size:0.74rem;color:rgba(255,255,255,0.4);text-align:center;margin-top:0.5rem;">🔒 Your information is private and protected.</p>
       </form>
@@ -111,9 +129,9 @@
         </div>
         <div class="contact-info-item"><div class="contact-info-icon">📍</div><div><h4>SERVICE AREA</h4><p>Greater Phoenix Metro &amp; Arizona</p></div></div>
         <div class="contact-info-item"><div class="contact-info-icon">📞</div><div><h4>PHONE</h4><p><a href="tel:4806523250" style="color:rgba(255,255,255,0.85);">(480) 652-3250</a></p></div></div>
-        <div class="contact-info-item"><div class="contact-info-icon">✉️</div><div><h4>EMAIL</h4><p><a href="mailto:info@avanzaaba.com" style="color:rgba(255,255,255,0.85);">info@avanzaaba.com</a></p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon">✉️</div><div><h4>EMAIL</h4><p><a href="mailto:info@avanzatherapyaz.com" style="color:rgba(255,255,255,0.85);">info@avanzatherapyaz.com</a></p></div></div>
         <div class="contact-info-item"><div class="contact-info-icon">🕐</div><div><h4>OFFICE HOURS</h4><p>Mon–Fri: 8:00am – 6:00pm<br/>Saturday: 9:00am – 1:00pm</p></div></div>
-        <div class="contact-info-item"><div class="contact-info-icon">🌐</div><div><h4>WEBSITE</h4><p>avanzaaba.com</p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon">🌐</div><div><h4>WEBSITE</h4><p>avanzatherapyaz.com</p></div></div>
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);">
           <p style="color:rgba(255,255,255,0.5);font-size:0.83rem;margin-bottom:1rem;">Prefer to start with paperwork?</p>
           <a href="intake.html" class="btn btn-outline-white">Complete Intake Forms →</a>

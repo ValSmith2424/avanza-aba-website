@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://avanzaaba.com/sitemap.xml
+Sitemap: https://avanzatherapyaz.com/sitemap.xml
 
 # Disallow admin or private paths if added in future
 # Disallow: /admin/
