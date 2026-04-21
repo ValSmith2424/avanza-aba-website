@@ -53,7 +53,7 @@
       btn.disabled = true;
 
       const data = new FormData(contactForm);
-      data.append('access_key', '522114');
+      data.append('access_key', '22225d59-fb9b-42f9-bdea-f2a0f4622967');
 
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
