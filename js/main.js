@@ -53,7 +53,7 @@
       btn.disabled = true;
 
       const data = new FormData(contactForm);
-      data.append('access_key', 'AVANZA_WEB3FORMS_KEY');
+      data.append('access_key', '329170');
 
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
