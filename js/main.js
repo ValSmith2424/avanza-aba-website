@@ -41,7 +41,7 @@
     });
   });
 
-  // ── CONTACT FORM HANDLER (Web3Forms → info@avanzatherapyaz.com) ──
+  // ── CONTACT FORM HANDLER (Web3Forms → Valerie@avanzaaz.com) ──
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', async e => {
@@ -53,7 +53,7 @@
       btn.disabled = true;
 
       const data = new FormData(contactForm);
-      data.append('access_key', '329170');
+      data.append('access_key', '522114');
 
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
