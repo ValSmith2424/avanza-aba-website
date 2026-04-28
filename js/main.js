@@ -53,14 +53,19 @@
       btn.disabled = true;
 
       const data = new FormData(contactForm);
-      data.append('access_key', '22225d59-fb9b-42f9-bdea-f2a0f4622967');
 
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: data
         });
-        const json = await res.json();
+
+        let json;
+        try {
+          json = await res.json();
+        } catch {
+          throw new Error(`HTTP ${res.status} — could not parse response`);
+        }
 
         if (json.success) {
           btn.textContent = 'Message Sent! ✓';
@@ -72,13 +77,13 @@
             btn.style.background = '';
           }, 5000);
         } else {
-          throw new Error(json.message || 'Submission failed');
+          throw new Error(json.message || `Rejected (HTTP ${res.status})`);
         }
       } catch (err) {
         btn.textContent = 'Error — please try again';
         btn.style.background = '#c0392b';
         btn.disabled = false;
-        console.error('Form error:', err);
+        console.error('Web3Forms error:', err.message || err);
         setTimeout(() => {
           btn.textContent = originalText;
           btn.style.background = '';

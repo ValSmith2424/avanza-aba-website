@@ -74,16 +74,22 @@
   <div class="container">
     <div class="contact-grid">
       <form class="form-stack form-dark reveal" id="contactForm" novalidate>
+        <!-- Web3Forms hidden fields -->
+        <input type="hidden" name="access_key" value="22225d59-fb9b-42f9-bdea-f2a0f4622967"/>
+        <input type="hidden" name="subject" value="Nuevo Mensaje de Contacto — Avanza ABA"/>
+        <input type="hidden" name="from_name" value="Avanza ABA Website"/>
+        <input type="hidden" name="redirect" value="false"/>
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off"/>
         <h3 style="color:white;font-family:'Cormorant Garamond',serif;font-weight:500;margin-bottom:1.5rem;">Envíanos un mensaje</h3>
         <div class="form-row">
-          <div class="form-field"><label>Nombre <span class="req">*</span></label><input type="text" placeholder="María" required autocomplete="given-name"/></div>
-          <div class="form-field"><label>Apellido <span class="req">*</span></label><input type="text" placeholder="García" required autocomplete="family-name"/></div>
+          <div class="form-field"><label>Nombre <span class="req">*</span></label><input type="text" name="first_name" placeholder="María" required autocomplete="given-name"/></div>
+          <div class="form-field"><label>Apellido <span class="req">*</span></label><input type="text" name="last_name" placeholder="García" required autocomplete="family-name"/></div>
         </div>
-        <div class="form-field"><label>Correo Electrónico <span class="req">*</span></label><input type="email" placeholder="tuemail@correo.com" required autocomplete="email"/></div>
-        <div class="form-field"><label>Teléfono</label><input type="tel" placeholder="(480) 555-0100" autocomplete="tel"/></div>
+        <div class="form-field"><label>Correo Electrónico <span class="req">*</span></label><input type="email" name="email" placeholder="tuemail@correo.com" required autocomplete="email"/></div>
+        <div class="form-field"><label>Teléfono</label><input type="tel" name="phone" placeholder="(480) 555-0100" autocomplete="tel"/></div>
         <div class="form-field">
           <label>Motivo del Contacto</label>
-          <select>
+          <select name="reason">
             <option value="">Seleccionar...</option>
             <option>Programar una consulta gratuita</option>
             <option>Pregunta sobre seguro / beneficios</option>
@@ -94,7 +100,7 @@
           </select>
         </div>
         <div class="form-field"><label>¿Para quién busca servicios?</label>
-          <select>
+          <select name="service_for">
             <option value="">Seleccionar...</option>
             <option>Mi hijo/a (menor de 12 años)</option>
             <option>Mi adolescente (13–17 años)</option>
@@ -103,7 +109,7 @@
             <option>Varios miembros de la familia</option>
           </select>
         </div>
-        <div class="form-field"><label>Mensaje</label><textarea placeholder="Cuéntanos sobre tus necesidades, preguntas o cómo podemos ayudarte..."></textarea></div>
+        <div class="form-field"><label>Mensaje</label><textarea name="message" placeholder="Cuéntanos sobre tus necesidades, preguntas o cómo podemos ayudarte..."></textarea></div>
         <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;justify-content:center;">Enviar Mensaje</button>
         <p style="font-size:0.74rem;color:rgba(255,255,255,0.4);text-align:center;margin-top:0.5rem;">🔒 Tu información es privada y está protegida.</p>
       </form>
