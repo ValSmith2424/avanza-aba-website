@@ -114,11 +114,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/global.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/hero.css"/>
-  <link rel="stylesheet" href="css/components.css"/>
-  <link rel="stylesheet" href="css/responsive.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
   <style>
     /* Back to top */
     #backToTop {
@@ -140,7 +136,7 @@
 <nav id="mainNav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="Avanza ABA — Center of Excellence for Autism"/>
+      <img src="assets/images/logo.webp" alt="Avanza ABA — Center of Excellence for Autism" width="455" height="303"/>
     </a>
     <ul class="nav-links" role="list">
       <li><a href="about.html">About</a></li>
@@ -179,9 +175,11 @@
   <a href="giving.html">Giving Back</a>
   <a href="careers.html">Careers</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="nav-cta">Start Your Journey →</a><div class="nav-lang"><span class="lang-active">EN</span><span>|</span><a href="es/index.html">ES</a></div><a href="#" class="nav-portal" target="_blank" rel="noopener noreferrer">Client Portal →</a>
+  <a href="contact.html" class="nav-cta">Start Your Journey →</a><div class="nav-lang"><span class="lang-active">EN</span><span>|</span><a href="es/index.html">ES</a></div>
+<a href="#" class="nav-portal" target="_blank" rel="noopener noreferrer">Client Portal →</a>
 </div>
 
+<main>
 <!-- ── HERO ── -->
 <section class="hero" id="home" aria-label="Hero">
   <div class="hero-inner">
@@ -212,7 +210,7 @@
       <svg class="hero-piece" style="width:70px;bottom:10px;left:10px;opacity:0.13;--r:162deg;--dur:14s;--delay:2s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#48B8E8"/></svg>
       <svg class="hero-piece" style="width:55px;top:20px;right:-10px;opacity:0.12;--r:38deg;--dur:9s;--delay:1s" viewBox="0 0 80 88" aria-hidden="true"><path d="M 0,0 L 62,0 L 62,22 Q 76,22 76,32 Q 76,42 62,42 L 62,70 L 40,70 Q 40,84 30,84 Q 20,84 20,70 L 0,70 Z" fill="#2D70B0"/></svg>
       <div class="hero-logo-wrap reveal reveal-delay-2">
-        <img src="assets/images/logo.png" alt="Avanza ABA — Center of Excellence for Autism logo"/>
+        <img fetchpriority="high" src="assets/images/logo.webp" alt="Avanza ABA — Center of Excellence for Autism logo" width="455" height="303"/>
       </div>
     </div>
   </div>
@@ -249,7 +247,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-visual reveal">
-        <img src="assets/images/hero-image.png" alt="Avanza ABA — a family supported through therapy" style="object-fit:cover;border-radius:var(--radius-lg);width:100%;max-height:380px;"/>
+        <img src="assets/images/hero-image.webp" alt="Avanza ABA — a family supported through therapy" style="object-fit:cover;border-radius:var(--radius-lg);width:100%;max-height:380px;" width="954" height="768"/>
       </div>
       <div>
         <span class="section-tag reveal">Who We Are</span>
@@ -420,11 +418,11 @@
 <section aria-label="Our community" style="padding:0;overflow:hidden;">
   <div class="photo-gallery-strip">
     <div class="pg-item">
-      <img src="assets/images/caring-hands.PNG" alt="Caring hands — Avanza ABA therapist"/>
+      <img src="assets/images/caring-hands.webp" alt="Caring hands — Avanza ABA therapist" width="720" height="380"/>
       <div class="pg-caption">Building trust, one connection at a time</div>
     </div>
     <div class="pg-item">
-      <img src="assets/images/avanzaoffice.png" alt="Avanza ABA office — welcoming environment"/>
+      <img src="assets/images/avanzaoffice.webp" alt="Avanza ABA office — welcoming environment" width="721" height="481"/>
       <div class="pg-caption">A welcoming space designed for growth</div>
     </div>
   </div>
@@ -570,8 +568,8 @@
           <input type="tel" name="phone" placeholder="(480) 555-0100" autocomplete="tel"/>
         </div>
         <div class="form-field">
-          <label>Who are you seeking services for?</label>
-          <select name="service_for">
+          <label for="service_for">Who are you seeking services for?</label>
+          <select id="service_for" name="service_for">
             <option value="">Select...</option>
             <option>My child (under 12)</option>
             <option>My teenager (13–17)</option>
@@ -589,27 +587,27 @@
       <div class="contact-info reveal reveal-delay-2">
         <div class="contact-info-item">
           <div class="contact-info-icon">📍</div>
-          <div><h4>LOCATION</h4><p>Serving Greater Phoenix &amp; Arizona</p></div>
+          <div><p class="contact-label">LOCATION</p><p>Serving Greater Phoenix &amp; Arizona</p></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">📞</div>
-          <div><h4>PHONE</h4><p><a href="tel:4806523250" style="color:rgba(255,255,255,0.85);">(480) 652-3250</a></p></div>
+          <div><p class="contact-label">PHONE</p><p><a href="tel:4806523250" style="color:rgba(255,255,255,0.85);">(480) 652-3250</a></p></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">✉️</div>
-          <div><h4>EMAIL</h4><p><a href="mailto:Valerie@avanzaaz.com" style="color:rgba(255,255,255,0.85);">Valerie@avanzaaz.com</a></p></div>
+          <div><p class="contact-label">EMAIL</p><p><a href="mailto:Valerie@avanzaaz.com" style="color:rgba(255,255,255,0.85);">Valerie@avanzaaz.com</a></p></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">🕐</div>
-          <div><h4>AVAILABILITY</h4><p>Mon–Fri 8am–6pm · Sat 9am–1pm</p></div>
+          <div><p class="contact-label">AVAILABILITY</p><p>Mon–Fri 8am–6pm · Sat 9am–1pm</p></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">🌐</div>
-          <div><h4>WEBSITE</h4><p>avanzatherapyaz.com</p></div>
+          <div><p class="contact-label">WEBSITE</p><p>avanzatherapyaz.com</p></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">🛡️</div>
-          <div><h4>HIPAA COMPLIANT</h4><p>Your information is always private and protected.</p></div>
+          <div><p class="contact-label">HIPAA COMPLIANT</p><p>Your information is always private and protected.</p></div>
         </div>
       </div>
     </div>
@@ -619,20 +617,21 @@
 </section>
 
 <!-- ── FOOTER ── -->
+</main>
+
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="Avanza ABA"/>
+        <img src="assets/images/logo.webp" alt="Avanza ABA" width="455" height="303"/>
         <p>Center of Excellence for Autism. Evidence-based ABA therapy for children, adults, and families across Arizona. Rooted in care. Growing with purpose.</p>
-        <div style="display:flex;gap:0.75rem;margin-top:1.25rem;">
+        <div class="footer-social" style="display:flex;gap:0;margin-top:1.25rem;">
           <a href="#" aria-label="Facebook" style="color:rgba(255,255,255,0.5);font-size:1.2rem;transition:color 0.2s;" onmouseover="this.style.color='#B0D4E4'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">𝒻</a>
           <a href="#" aria-label="Instagram" style="color:rgba(255,255,255,0.5);font-size:1.2rem;transition:color 0.2s;" onmouseover="this.style.color='#B0D4E4'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">◈</a>
           <a href="#" aria-label="LinkedIn" style="color:rgba(255,255,255,0.5);font-size:1.2rem;transition:color 0.2s;" onmouseover="this.style.color='#B0D4E4'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">𝓁</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
+      <div class="footer-col"><h3>Services</h3>
         <ul>
           <li><a href="services.html#in-home">In-Home Therapy</a></li>
           <li><a href="services.html#school">School Support</a></li>
@@ -641,8 +640,7 @@
           <li><a href="services.html#insurance">Insurance Help</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Learn</h4>
+      <div class="footer-col"><h3>Learn</h3>
         <ul>
           <li><a href="what-is-aba.html">What is ABA?</a></li>
           <li><a href="aba-process.html">Our Process</a></li>
@@ -651,8 +649,7 @@
           <li><a href="blog.html">Blog</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Company</h4>
+      <div class="footer-col"><h3>Company</h3>
         <ul>
           <li><a href="about.html">About Us</a></li>
           <li><a href="giving.html">Giving Back</a></li>

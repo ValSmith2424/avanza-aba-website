@@ -20,19 +20,16 @@
   <meta name="twitter:description" content="Contact Avanza ABA to schedule your free consultation, verify insurance, or ask about ABA therapy services in Arizona."/>
   <meta name="twitter:image" content="https://avanzatherapyaz.com/assets/images/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/global.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/hero.css"/>
-  <link rel="stylesheet" href="css/components.css"/>
-  <link rel="stylesheet" href="css/responsive.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 
 <nav id="mainNav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="Avanza ABA — Center of Excellence for Autism"/>
+      <img src="assets/images/logo.webp" alt="Avanza ABA — Center of Excellence for Autism" width="455" height="303"/>
     </a>
     <ul class="nav-links" role="list">
       <li><a href="about.html">About</a></li>
@@ -70,9 +67,11 @@
   <a href="giving.html">Giving Back</a>
   <a href="careers.html">Careers</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="nav-cta">Start Your Journey &#8594;</a><div class="nav-lang"><span class="lang-active">EN</span><span>|</span><a href="es/contact.html">ES</a></div><a href="#" class="nav-portal" target="_blank" rel="noopener noreferrer">Client Portal &#8594;</a>
+  <a href="contact.html" class="nav-cta">Start Your Journey &#8594;</a><div class="nav-lang"><span class="lang-active">EN</span><span>|</span><a href="es/contact.html">ES</a></div>
+<a href="#" class="nav-portal" target="_blank" rel="noopener noreferrer">Client Portal &#8594;</a>
 </div>
 
+<main>
 <div class="page-hero">
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></nav>
@@ -110,8 +109,8 @@
             <option>Other</option>
           </select>
         </div>
-        <div class="form-field"><label>Who are you seeking services for?</label>
-          <select name="service_for">
+        <div class="form-field"><label for="service_for">Who are you seeking services for?</label>
+          <select id="service_for" name="service_for">
             <option value="">Select...</option>
             <option>My child (under 12)</option><option>My teenager (13–17)</option>
             <option>An adult (18+)</option><option>Myself</option><option>Multiple family members</option>
@@ -127,11 +126,11 @@
           <h3 style="color:white;font-family:'Cormorant Garamond',serif;font-weight:500;">Contact Information</h3>
           <p style="color:rgba(255,255,255,0.6);font-size:0.88rem;margin-top:0.35rem;">We look forward to hearing from you.</p>
         </div>
-        <div class="contact-info-item"><div class="contact-info-icon">📍</div><div><h4>SERVICE AREA</h4><p>Greater Phoenix Metro &amp; Arizona</p></div></div>
-        <div class="contact-info-item"><div class="contact-info-icon">📞</div><div><h4>PHONE</h4><p><a href="tel:4806523250" style="color:rgba(255,255,255,0.85);">(480) 652-3250</a></p></div></div>
-        <div class="contact-info-item"><div class="contact-info-icon">✉️</div><div><h4>EMAIL</h4><p><a href="mailto:Valerie@avanzaaz.com" style="color:rgba(255,255,255,0.85);">Valerie@avanzaaz.com</a></p></div></div>
-        <div class="contact-info-item"><div class="contact-info-icon">🕐</div><div><h4>OFFICE HOURS</h4><p>Mon–Fri: 8:00am – 6:00pm<br/>Saturday: 9:00am – 1:00pm</p></div></div>
-        <div class="contact-info-item"><div class="contact-info-icon">🌐</div><div><h4>WEBSITE</h4><p>avanzatherapyaz.com</p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon">📍</div><div><p class="contact-label">SERVICE AREA</p><p>Greater Phoenix Metro &amp; Arizona</p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon">📞</div><div><p class="contact-label">PHONE</p><p><a href="tel:4806523250" style="color:rgba(255,255,255,0.85);">(480) 652-3250</a></p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon">✉️</div><div><p class="contact-label">EMAIL</p><p><a href="mailto:Valerie@avanzaaz.com" style="color:rgba(255,255,255,0.85);">Valerie@avanzaaz.com</a></p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon">🕐</div><div><p class="contact-label">OFFICE HOURS</p><p>Mon–Fri: 8:00am – 6:00pm<br/>Saturday: 9:00am – 1:00pm</p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon">🌐</div><div><p class="contact-label">WEBSITE</p><p>avanzatherapyaz.com</p></div></div>
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);">
           <p style="color:rgba(255,255,255,0.5);font-size:0.83rem;margin-bottom:1rem;">Prefer to start with paperwork?</p>
           <a href="contact.html" class="btn btn-outline-white">Complete Intake Forms →</a>
@@ -143,10 +142,10 @@
 
 <footer><div class="container">
   <div class="footer-grid">
-    <div class="footer-brand"><img src="assets/images/logo.png" alt="Avanza ABA"/><p>Center of Excellence for Autism. ABA therapy across Arizona.</p></div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">All Services</a></li><li><a href="what-is-aba.html">What is ABA?</a></li><li><a href="aba-process.html">Our Process</a></li></ul></div>
-    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="giving.html">Giving Back</a></li><li><a href="careers.html">Careers</a></li></ul></div>
-    <div class="footer-col"><h4>Patients</h4><ul><li><a href="contact.html">Get Started</a></li><li><a href="resources.html">Resources</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-brand"><img src="assets/images/logo.webp" alt="Avanza ABA" width="455" height="303"/><p>Center of Excellence for Autism. ABA therapy across Arizona.</p></div>
+    <div class="footer-col"><h3>Services</h4><ul><li><a href="services.html">All Services</a></li><li><a href="what-is-aba.html">What is ABA?</a></li><li><a href="aba-process.html">Our Process</a></li></ul></div>
+    <div class="footer-col"><h3>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="giving.html">Giving Back</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+    <div class="footer-col"><h3>Patients</h4><ul><li><a href="contact.html">Get Started</a></li><li><a href="resources.html">Resources</a></li><li><a href="blog.html">Blog</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>&copy; <span id="footerYear"></span> Avanza ABA. All Rights Reserved.</p><div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="#">Sitemap</a></div></div>
 </div></footer>
