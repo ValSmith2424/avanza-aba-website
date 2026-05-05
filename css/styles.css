@@ -981,14 +981,17 @@ nav.scrolled {
   font-size: 0.74rem;
   font-weight: 500;
   letter-spacing: 0.05em;
-  position: relative;
-  z-index: 1001;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1002;
+  height: 36px;
+  display: flex; align-items: center; justify-content: center;
 }
 .avail-banner .avail-sep { opacity: 0.45; margin: 0 0.55rem; }
 body { padding-top: 106px; }
 @media (max-width: 640px) {
-  .avail-banner { font-size: 0.68rem; padding: 0.4rem 0.75rem; line-height: 1.5; }
-  body { padding-top: 110px; }
+  .avail-banner { font-size: 0.68rem; padding: 0.4rem 0.75rem; line-height: 1.4; height: auto; min-height: 36px; }
+  body { padding-top: 112px; }
 }
 
 /* ── INSURANCE LOGOS GRID ── */
