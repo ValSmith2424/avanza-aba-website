@@ -22,8 +22,8 @@
   --grad-light:   linear-gradient(135deg, #C8DEC8 0%, #D4E8D0 50%, #E8F0E0 100%);
 
   /* Backgrounds */
-  --bg:           #FAF7F0;   /* warm cream */
-  --bg-alt:       #F0ECE0;   /* light warm tint */
+  --bg:           #F7FAF7;   /* soft sage-white — primary surface */
+  --bg-alt:       #EDF5ED;   /* light sage tint — alternating sections */
   --bg-dark:      #2A5C3F;   /* dark forest */
   --card:         #FFFFFF;
   --white:        #ffffff;
@@ -412,7 +412,7 @@ footer {
 .hero {
   min-height: 100vh; display: flex; align-items: center;
   padding: 3rem 0 4rem;
-  background: linear-gradient(140deg, #FAF7F0 0%, #E8F0E4 40%, #F0E8D8 70%, #FAF7F0 100%);
+  background: linear-gradient(140deg, #F7FAF7 0%, #E8F2E8 40%, #EEF5EE 70%, #F7FAF7 100%);
   position: relative; overflow: hidden;
 }
 
