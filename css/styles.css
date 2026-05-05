@@ -42,7 +42,6 @@
   --shadow-lg:    0 16px 48px rgba(26,40,24,0.14);
   --radius-sm:    8px;
   --radius-md:    16px;
-  --radius-lg:    28px;
 
   /* ── Semantic shape tokens (source of truth for the design system) ── */
   --radius-card:   24px;   /* cards, panels */
