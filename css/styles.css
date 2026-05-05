@@ -46,7 +46,8 @@
 
   /* ── Semantic shape tokens (source of truth for the design system) ── */
   --radius-card:   24px;   /* cards, panels */
-  --radius-button: 14px;   /* buttons, tags, badges, nav items */
+  --radius-button: 14px;   /* buttons, CTAs, nav buttons */
+  --radius-badge:   8px;   /* eyebrow labels, section tags, chips, small badges */
   --radius-input:  14px;   /* form inputs, selects, textareas */
   --radius-image:  24px;   /* image thumbnails, visual containers */
 
@@ -91,7 +92,7 @@ section { padding: 5rem 0; position: relative; overflow: hidden; }
   display: inline-block; font-size: 0.7rem; letter-spacing: 0.2em;
   text-transform: uppercase; font-weight: 600; color: var(--teal-dark);
   background: var(--teal-light); padding: 0.3rem 0.9rem;
-  border-radius: var(--radius-button); margin-bottom: 1rem;
+  border-radius: var(--radius-badge); margin-bottom: 1rem;
 }
 .section-tag.warm {
   color: var(--terra); background: var(--terra-light);
@@ -175,7 +176,7 @@ section { padding: 5rem 0; position: relative; overflow: hidden; }
   display: inline-flex; align-items: center; gap: 0.35rem;
   font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
   text-transform: uppercase; padding: 0.28rem 0.75rem;
-  border-radius: var(--radius-button); border: 1px solid var(--border);
+  border-radius: var(--radius-badge); border: 1px solid var(--border);
   color: var(--teal-dark); background: var(--teal-light);
 }
 
@@ -445,7 +446,7 @@ footer {
   font-size: 0.72rem; letter-spacing: 0.18em; font-weight: 600;
   text-transform: uppercase; color: var(--teal-dark);
   background: var(--teal-light); padding: 0.35rem 1rem;
-  border-radius: var(--radius-button); margin-bottom: 1.75rem;
+  border-radius: var(--radius-badge); margin-bottom: 1.75rem;
 }
 .hero h1 { color: var(--text); margin-bottom: 1.25rem; }
 .hero h1 em { font-style: italic; color: var(--terra); }
@@ -767,7 +768,7 @@ footer {
 }
 .blog-tag {
   background: var(--teal-light); color: var(--teal-dark);
-  padding: 0.2rem 0.6rem; border-radius: var(--radius-button);
+  padding: 0.2rem 0.6rem; border-radius: var(--radius-badge);
   font-size: 0.7rem; font-weight: 600;
 }
 .blog-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; line-height: 1.35; }
@@ -842,7 +843,7 @@ footer {
 .career-item p { font-size: 0.83rem; }
 .career-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
 .career-tag {
-  font-size: 0.7rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-button);
+  font-size: 0.7rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-badge);
   background: var(--teal-light); color: var(--teal-dark); font-weight: 500;
 }
 /* ============================================================
@@ -1013,7 +1014,7 @@ body { padding-top: 106px; }
   padding: 0.45rem 0.95rem;
   background: var(--card);
   border: 1.5px solid var(--border);
-  border-radius: var(--radius-button);
+  border-radius: var(--radius-badge);
   font-size: 0.78rem; font-weight: 600;
   color: var(--text-muted);
   white-space: nowrap;

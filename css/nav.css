@@ -30,7 +30,7 @@ nav.scrolled {
 }
 .nav-links a {
   font-size: 0.8rem; font-weight: 500; color: var(--teal-dark);
-  padding: 0.4rem 0.6rem; border-radius: var(--radius-full);
+  padding: 0.4rem 0.6rem; border-radius: var(--radius-button);
   letter-spacing: 0.02em; white-space: nowrap;
   transition: color var(--trans), background var(--trans);
 }
@@ -81,7 +81,7 @@ nav.scrolled {
 /* Portal login button */
 .nav-portal {
   border: 1.5px solid var(--teal-dark); color: var(--teal-dark) !important;
-  padding: 0.35rem 0.85rem !important; border-radius: var(--radius-full);
+  padding: 0.35rem 0.85rem !important; border-radius: var(--radius-button);
   font-size: 0.79rem !important; font-weight: 500; white-space: nowrap;
   transition: background var(--trans), color var(--trans), transform var(--trans), box-shadow var(--trans) !important;
 }
@@ -95,7 +95,7 @@ nav.scrolled {
 .nav-cta {
   background: linear-gradient(135deg, #1BAF8A 0%, #48B8E8 100%);
   color: var(--white) !important;
-  padding: 0.38rem 1.05rem !important; border-radius: var(--radius-full);
+  padding: 0.38rem 1.05rem !important; border-radius: var(--radius-button);
   font-size: 0.79rem !important; font-weight: 500; white-space: nowrap;
   transition: opacity var(--trans), transform var(--trans), box-shadow var(--trans) !important;
 }
