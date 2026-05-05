@@ -263,15 +263,13 @@ footer {
 nav {
   position: fixed; top: 36px; left: 0; right: 0; z-index: 1000;
   height: 70px; display: flex; align-items: center;
-  background: rgba(250,247,240,0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--bg);
   color: var(--teal-dark);
-  border-bottom: 1px solid var(--border);
-  transition: box-shadow var(--trans), background var(--trans);
+  border-bottom: 1.5px solid var(--border);
+  transition: box-shadow var(--trans);
 }
 nav.scrolled {
-  box-shadow: 0 4px 24px rgba(42,28,20,0.10);
+  box-shadow: 0 4px 24px rgba(26,40,24,0.12);
 }
 
 .nav-inner {
@@ -346,7 +344,7 @@ nav.scrolled {
 .nav-portal:hover {
   background: var(--teal-dark) !important; color: var(--white) !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(42,115,115,0.25) !important;
+  box-shadow: 0 4px 14px rgba(42,92,63,0.25) !important;
 }
 
 /* CTA button */
@@ -359,7 +357,7 @@ nav.scrolled {
 }
 .nav-cta:hover {
   opacity: 0.88; transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(36,144,196,0.35) !important;
+  box-shadow: 0 4px 14px rgba(42,92,63,0.35) !important;
 }
 
 /* Hamburger */
