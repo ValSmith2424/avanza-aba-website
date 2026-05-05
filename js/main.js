@@ -4,6 +4,15 @@
    ============================================================ */
 
 (function () {
+  // ── AVAILABILITY BANNER ────────────────────────────────────
+  (function injectBanner() {
+    const banner = document.createElement('div');
+    banner.className = 'avail-banner';
+    banner.setAttribute('role', 'banner');
+    banner.innerHTML = 'Now Accepting New Clients<span class="avail-sep">•</span>No Waitlist<span class="avail-sep">•</span>Bilingual Services Available<span class="avail-sep">•</span>In-Home &amp; Community-Based';
+    document.body.insertBefore(banner, document.body.firstChild);
+  })();
+
   // ── LANGUAGE AUTO-DETECTION ────────────────────────────────
   // On first visit with no saved preference, redirect Spanish-language
   // browsers to the /es/ version. Respects manual EN↔ES switches.
