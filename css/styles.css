@@ -260,7 +260,7 @@ footer {
    AVANZA ABA — Navigation CSS
    ============================================================ */
 
-nav {
+#mainNav {
   position: fixed; top: 36px; left: 0; right: 0; z-index: 1000;
   height: 70px; display: flex; align-items: center;
   background: var(--bg);
@@ -268,7 +268,7 @@ nav {
   border-bottom: 1.5px solid var(--border);
   transition: box-shadow var(--trans);
 }
-nav.scrolled {
+#mainNav.scrolled {
   box-shadow: 0 4px 24px rgba(26,40,24,0.12);
 }
 
