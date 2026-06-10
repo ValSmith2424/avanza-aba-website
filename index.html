@@ -593,9 +593,15 @@
           <label>Email Address <span class="req">*</span></label>
           <input type="email" name="email" placeholder="you@email.com" required autocomplete="email"/>
         </div>
-        <div class="form-field">
-          <label>Phone Number</label>
-          <input type="tel" name="phone" placeholder="(480) 555-0100" autocomplete="tel"/>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="(480) 555-0100" autocomplete="tel"/>
+          </div>
+          <div class="form-field">
+            <label>City</label>
+            <input type="text" name="city" placeholder="Phoenix" autocomplete="address-level2"/>
+          </div>
         </div>
         <div class="form-field">
           <label for="service_for">Who are you seeking services for?</label>
@@ -606,6 +612,22 @@
             <option>An adult (18+)</option>
             <option>Myself</option>
             <option>Multiple family members</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Insurance Provider</label>
+          <select name="insurance">
+            <option value="">Select...</option>
+            <option>AHCCCS / Medicaid</option>
+            <option>Blue Cross Blue Shield of AZ</option>
+            <option>Aetna</option>
+            <option>Cigna / Evernorth</option>
+            <option>UnitedHealthcare</option>
+            <option>Tricare</option>
+            <option>Banner Health Plan</option>
+            <option>Mercy Care</option>
+            <option>Other</option>
+            <option>No insurance / Self-pay</option>
           </select>
         </div>
         <div class="form-field">
