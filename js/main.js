@@ -4,12 +4,16 @@
    ============================================================ */
 
 (function () {
+  const IS_ES = window.location.pathname.includes('/es/');
+
   // ── AVAILABILITY BANNER ────────────────────────────────────
   (function injectBanner() {
     const banner = document.createElement('div');
     banner.className = 'avail-banner';
     banner.setAttribute('role', 'banner');
-    banner.innerHTML = 'Now Accepting New Clients<span class="avail-sep">•</span>No Waitlist<span class="avail-sep">•</span>Bilingual Services Available<span class="avail-sep">•</span>In-Home &amp; Community-Based';
+    banner.innerHTML = IS_ES
+      ? 'Aceptando Nuevos Clientes<span class="avail-sep">•</span>Sin Lista de Espera<span class="avail-sep">•</span>Servicios Bilingües Disponibles<span class="avail-sep">•</span>En el Hogar y la Comunidad'
+      : 'Now Accepting New Clients<span class="avail-sep">•</span>No Waitlist<span class="avail-sep">•</span>Bilingual Services Available<span class="avail-sep">•</span>In-Home &amp; Community-Based';
     document.body.insertBefore(banner, document.body.firstChild);
   })();
 
@@ -58,7 +62,7 @@
       const btn = contactForm.querySelector('[type="submit"]');
       const originalText = btn.textContent;
 
-      btn.textContent = 'Sending…';
+      btn.textContent = IS_ES ? 'Enviando…' : 'Sending…';
       btn.disabled = true;
 
       const data = new FormData(contactForm);
@@ -77,7 +81,7 @@
         }
 
         if (json.success) {
-          btn.textContent = 'Message Sent! ✓';
+          btn.textContent = IS_ES ? '¡Mensaje Enviado! ✓' : 'Message Sent! ✓';
           btn.style.background = 'linear-gradient(135deg,#1BAF8A,#48B8E8)';
           contactForm.reset();
           setTimeout(() => {
@@ -89,7 +93,7 @@
           throw new Error(json.message || `Rejected (HTTP ${res.status})`);
         }
       } catch (err) {
-        btn.textContent = 'Error — please try again';
+        btn.textContent = IS_ES ? 'Error — intenta de nuevo' : 'Error — please try again';
         btn.style.background = '#c0392b';
         btn.disabled = false;
         console.error('Web3Forms error:', err.message || err);
