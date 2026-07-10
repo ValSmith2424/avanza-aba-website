@@ -10,7 +10,6 @@
   (function injectBanner() {
     const banner = document.createElement('div');
     banner.className = 'avail-banner';
-    banner.setAttribute('role', 'banner');
     banner.innerHTML = IS_ES
       ? 'Aceptando Nuevos Clientes<span class="avail-sep">•</span>Sin Lista de Espera<span class="avail-sep">•</span>Servicios Bilingües Disponibles<span class="avail-sep">•</span>En el Hogar y la Comunidad'
       : 'Now Accepting New Clients<span class="avail-sep">•</span>No Waitlist<span class="avail-sep">•</span>Bilingual Services Available<span class="avail-sep">•</span>In-Home &amp; Community-Based';
@@ -48,7 +47,10 @@
       const target = document.querySelector(anchor.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const offset = 80;
+      // Fixed chrome height varies (banner wraps on small phones) — measure it
+      const banner = document.querySelector('.avail-banner');
+      const nav = document.getElementById('mainNav');
+      const offset = (banner ? banner.offsetHeight : 0) + (nav ? nav.offsetHeight : 0) + 12;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     });

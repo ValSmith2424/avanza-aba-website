@@ -48,14 +48,28 @@
   document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
 
   // ── FAQ ACCORDION ──────────────────────────────────────────
-  document.querySelectorAll('.faq-question').forEach(btn => {
+  document.querySelectorAll('.faq-question').forEach((btn, idx) => {
+    const item = btn.closest('.faq-item');
+    const answer = item ? item.querySelector('.faq-answer') : null;
+    if (answer) {
+      if (!answer.id) answer.id = 'faq-answer-' + (idx + 1);
+      btn.setAttribute('aria-controls', answer.id);
+    }
+    btn.setAttribute('aria-expanded', 'false');
+
     btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
       const wasOpen = item.classList.contains('open');
       // Close all
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        const b = i.querySelector('.faq-question');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
       // Toggle this one
-      if (!wasOpen) item.classList.add('open');
+      if (!wasOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 })();
