@@ -95,7 +95,7 @@
           throw new Error(json.message || `Rejected (HTTP ${res.status})`);
         }
       } catch (err) {
-        btn.textContent = IS_ES ? 'Error — intenta de nuevo' : 'Error — please try again';
+        btn.textContent = IS_ES ? 'Error: intenta de nuevo' : 'Error: please try again';
         btn.style.background = '#c0392b';
         btn.disabled = false;
         console.error('Web3Forms error:', err.message || err);
