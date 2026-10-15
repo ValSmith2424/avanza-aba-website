@@ -107,27 +107,13 @@
           </select>
         </div>
 
-        <!-- NEW CLIENT INTAKE FIELDS (conditional) -->
-        <div id="intakeFields" style="display:none;">
-          <div class="form-field"><label>Edad del Niño/a <span class="req">*</span></label><input type="number" id="childAge" name="child_age" min="0" max="4" placeholder="0" autocomplete="off" aria-label="Edad del niño/a en años"/><small style="color:rgba(255,255,255,0.5);display:block;margin-top:0.25rem;">Debe ser menor de 5 años</small></div>
-          <div class="form-field"><label>Forma Preferida de Contacto <span class="req">*</span></label>
-            <select id="contactMethod" name="contact_method" required aria-label="Forma preferida para comunicarse">
-              <option value="">Seleccionar...</option>
-              <option>Llamada telefónica</option>
-              <option>Correo electrónico</option>
-              <option>Mensaje de texto</option>
-            </select>
-          </div>
-          <div class="form-field"><label>Comentarios o Preguntas Adicionales</label><textarea name="intake_comments" id="intakeComments" placeholder="Cuéntanos sobre tu hijo/a, cualquier inquietud o preguntas que te gustaría discutir..." aria-label="Información adicional opcional"></textarea></div>
-        </div>
-
-        <!-- STANDARD CONTACT FIELDS (hidden for intake) -->
+        <!-- STANDARD CONTACT FIELDS -->
         <div id="standardFields">
           <div class="form-field"><label for="service_for">¿Para quién busca servicios?</label>
             <select id="service_for" name="service_for">
               <option value="">Seleccionar...</option>
               <option>Mi hijo/a (menor de 5 años)</option>
-              <option>Mi hijo/a (5-12 años)</option>
+              <option>Mi hijo/a (6-12 años)</option>
               <option>Mi adolescente (13–17 años)</option>
               <option>Un adulto (18+)</option>
               <option>Para mí mismo/a</option>
@@ -139,8 +125,8 @@
           <div id="ageFieldUnder5" style="display:none;">
             <div class="form-field"><label>Edad del Niño/a <span class="req">*</span></label><input type="number" id="ageUnder5" name="age_under_5" min="0" max="4" placeholder="ej. 3" required aria-label="Edad del niño/a en años"/></div>
           </div>
-          <div id="ageField5to12" style="display:none;">
-            <div class="form-field"><label>Edad del Niño/a <span class="req">*</span></label><input type="number" id="age5to12" name="age_5_to_12" min="5" max="12" placeholder="ej. 8" required aria-label="Edad del niño/a en años"/></div>
+          <div id="ageField6to12" style="display:none;">
+            <div class="form-field"><label>Edad del Niño/a <span class="req">*</span></label><input type="number" id="age6to12" name="age_6_to_12" min="6" max="12" placeholder="ej. 8" required aria-label="Edad del niño/a en años"/></div>
           </div>
           <div id="ageFieldTeen" style="display:none;">
             <div class="form-field"><label>Edad del Adolescente <span class="req">*</span></label><input type="number" id="ageTeen" name="age_teen" min="13" max="17" placeholder="ej. 15" required aria-label="Edad del adolescente en años"/></div>

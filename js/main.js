@@ -60,29 +60,16 @@
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     const reasonSelect = document.getElementById('reasonSelect');
-    const intakeFields = document.getElementById('intakeFields');
-    const standardFields = document.getElementById('standardFields');
-    const childAgeInput = document.getElementById('childAge');
-    const contactMethodSelect = document.getElementById('contactMethod');
     const subjectInput = contactForm.querySelector('input[name="subject"]');
 
-    // Handle intake form conditional display
+    // Update subject based on reason for intake submissions
     if (reasonSelect) {
       reasonSelect.addEventListener('change', () => {
-        const isIntake = reasonSelect.value.includes('New Client Intake');
-        if (intakeFields && standardFields) {
-          intakeFields.style.display = isIntake ? 'block' : 'none';
-          standardFields.style.display = isIntake ? 'none' : 'block';
-        }
-        // Update subject based on reason
         if (subjectInput) {
-          subjectInput.value = isIntake
+          subjectInput.value = reasonSelect.value.includes('New Client Intake')
             ? 'New Client Intake Inquiry, Avanza ABA'
             : 'New Contact Form Submission, Avanza ABA';
         }
-        // Update required attributes
-        if (childAgeInput) childAgeInput.required = isIntake;
-        if (contactMethodSelect) contactMethodSelect.required = isIntake;
       });
     }
 
@@ -90,11 +77,11 @@
     const serviceForSelect = document.getElementById('service_for');
     if (serviceForSelect) {
       const ageFieldUnder5 = document.getElementById('ageFieldUnder5');
-      const ageField5to12 = document.getElementById('ageField5to12');
+      const ageField6to12 = document.getElementById('ageField6to12');
       const ageFieldTeen = document.getElementById('ageFieldTeen');
       const ageFieldAdult = document.getElementById('ageFieldAdult');
       const ageUnder5 = document.getElementById('ageUnder5');
-      const age5to12 = document.getElementById('age5to12');
+      const age6to12 = document.getElementById('age6to12');
       const ageTeen = document.getElementById('ageTeen');
       const ageAdult = document.getElementById('ageAdult');
       const ageNA = document.getElementById('ageNA');
@@ -103,20 +90,20 @@
         const selection = serviceForSelect.value;
         // Hide all age fields first
         if (ageFieldUnder5) ageFieldUnder5.style.display = 'none';
-        if (ageField5to12) ageField5to12.style.display = 'none';
+        if (ageField6to12) ageField6to12.style.display = 'none';
         if (ageFieldTeen) ageFieldTeen.style.display = 'none';
         if (ageFieldAdult) ageFieldAdult.style.display = 'none';
         // Reset required attributes
         if (ageUnder5) ageUnder5.required = false;
-        if (age5to12) age5to12.required = false;
+        if (age6to12) age6to12.required = false;
         if (ageTeen) ageTeen.required = false;
 
         if (selection.includes('under 5')) {
           if (ageFieldUnder5) ageFieldUnder5.style.display = 'block';
           if (ageUnder5) ageUnder5.required = true;
-        } else if (selection.includes('5-12')) {
-          if (ageField5to12) ageField5to12.style.display = 'block';
-          if (age5to12) age5to12.required = true;
+        } else if (selection.includes('6-12')) {
+          if (ageField6to12) ageField6to12.style.display = 'block';
+          if (age6to12) age6to12.required = true;
         } else if (selection.includes('13–17')) {
           if (ageFieldTeen) ageFieldTeen.style.display = 'block';
           if (ageTeen) ageTeen.required = true;
@@ -126,40 +113,10 @@
       });
     }
 
-    // Age validation for intake
-    if (childAgeInput) {
-      childAgeInput.addEventListener('blur', () => {
-        if (intakeFields.style.display !== 'none') {
-          const age = parseInt(childAgeInput.value, 10);
-          if (childAgeInput.value && (isNaN(age) || age < 0 || age >= 5)) {
-            childAgeInput.setCustomValidity(IS_ES ? 'El niño debe tener menos de 5 años' : 'Child must be under 5 years old');
-          } else {
-            childAgeInput.setCustomValidity('');
-          }
-        }
-      });
-    }
-
     contactForm.addEventListener('submit', async e => {
       e.preventDefault();
       const btn = contactForm.querySelector('[type="submit"]');
       const originalText = btn.textContent;
-
-      // Validate intake-specific fields if intake form is shown
-      if (intakeFields && intakeFields.style.display !== 'none') {
-        if (!childAgeInput.value) {
-          childAgeInput.focus();
-          childAgeInput.setCustomValidity(IS_ES ? 'Por favor ingrese la edad del niño' : 'Please enter child\'s age');
-          childAgeInput.reportValidity();
-          return;
-        }
-        const age = parseInt(childAgeInput.value, 10);
-        if (isNaN(age) || age < 0 || age >= 5) {
-          childAgeInput.setCustomValidity(IS_ES ? 'El niño debe tener menos de 5 años' : 'Child must be under 5 years old');
-          childAgeInput.reportValidity();
-          return;
-        }
-      }
 
       btn.textContent = IS_ES ? 'Enviando…' : 'Sending…';
       btn.disabled = true;
@@ -183,13 +140,6 @@
           btn.textContent = IS_ES ? '¡Mensaje Enviado! ✓' : 'Message Sent! ✓';
           btn.style.background = 'linear-gradient(135deg,#1BAF8A,#48B8E8)';
           contactForm.reset();
-          // Reset conditional display
-          if (intakeFields && standardFields && reasonSelect) {
-            intakeFields.style.display = 'none';
-            standardFields.style.display = 'block';
-            reasonSelect.value = '';
-            subjectInput.value = 'New Contact Form Submission, Avanza ABA';
-          }
           setTimeout(() => {
             btn.textContent = originalText;
             btn.disabled = false;
