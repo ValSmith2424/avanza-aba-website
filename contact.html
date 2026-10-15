@@ -110,9 +110,10 @@
         </div>
         <div class="form-field">
           <label>Reason for Contact</label>
-          <select name="reason">
+          <select name="reason" id="reasonSelect">
             <option value="">Select...</option>
             <option>Schedule a free consultation</option>
+            <option>Get Started with ABA Services (New Client Intake, Ages 0–4)</option>
             <option>Insurance / benefits question</option>
             <option>Learn more about services</option>
             <option>Referral from a provider</option>
@@ -120,30 +121,48 @@
             <option>Other</option>
           </select>
         </div>
-        <div class="form-field"><label for="service_for">Who are you seeking services for?</label>
-          <select id="service_for" name="service_for">
-            <option value="">Select...</option>
-            <option>My child (under 12)</option><option>My teenager (13–17)</option>
-            <option>An adult (18+)</option><option>Myself</option><option>Multiple family members</option>
-          </select>
+
+        <!-- NEW CLIENT INTAKE FIELDS (conditional) -->
+        <div id="intakeFields" style="display:none;">
+          <div class="form-field"><label>Child's Age <span class="req">*</span></label><input type="number" id="childAge" name="child_age" min="0" max="4" placeholder="0" autocomplete="off" aria-label="Child's age in years"/><small style="color:rgba(255,255,255,0.5);display:block;margin-top:0.25rem;">Must be under 5 years old</small></div>
+          <div class="form-field"><label>Preferred Contact Method <span class="req">*</span></label>
+            <select id="contactMethod" name="contact_method" required aria-label="Preferred way to reach you">
+              <option value="">Select...</option>
+              <option>Phone call</option>
+              <option>Email</option>
+              <option>Text message</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Additional Comments or Questions</label><textarea name="intake_comments" id="intakeComments" placeholder="Tell us about your child, any concerns, or questions you'd like to discuss..." aria-label="Optional additional information"></textarea></div>
         </div>
-        <div class="form-field">
-          <label>Insurance Provider</label>
-          <select name="insurance">
-            <option value="">Select...</option>
-            <option>Blue Cross Blue Shield of AZ</option>
-            <option>Anthem</option>
-            <option>TriWest / Tricare</option>
-            <option>Aetna</option>
-            <option>AHCCCS / Medicaid</option>
-            <option>Mercy Care</option>
-            <option>AZ Complete Health</option>
-            <option>Private pay</option>
-            <option>ESA (Empowerment Scholarship Account)</option>
-            <option>Other</option>
-          </select>
+
+        <!-- STANDARD CONTACT FIELDS (hidden for intake) -->
+        <div id="standardFields">
+          <div class="form-field"><label for="service_for">Who are you seeking services for?</label>
+            <select id="service_for" name="service_for">
+              <option value="">Select...</option>
+              <option>My child (under 12)</option><option>My teenager (13–17)</option>
+              <option>An adult (18+)</option><option>Myself</option><option>Multiple family members</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Insurance Provider</label>
+            <select name="insurance">
+              <option value="">Select...</option>
+              <option>Blue Cross Blue Shield of AZ</option>
+              <option>Anthem</option>
+              <option>TriWest / Tricare</option>
+              <option>Aetna</option>
+              <option>AHCCCS / Medicaid</option>
+              <option>Mercy Care</option>
+              <option>AZ Complete Health</option>
+              <option>Private pay</option>
+              <option>ESA (Empowerment Scholarship Account)</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Message</label><textarea name="message" placeholder="Tell us about your needs, questions, or how we can help..."></textarea></div>
         </div>
-        <div class="form-field"><label>Message</label><textarea name="message" placeholder="Tell us about your needs, questions, or how we can help..."></textarea></div>
         <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;justify-content:center;">Send Message</button>
         <p style="font-size:0.74rem;color:rgba(255,255,255,0.4);text-align:center;margin-top:0.5rem;">🔒 Your information is private and protected.</p>
       </form>

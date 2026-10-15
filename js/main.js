@@ -59,10 +59,67 @@
   // ── CONTACT FORM HANDLER (Web3Forms → Valerie@avanzaaz.com) ──
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
+    const reasonSelect = document.getElementById('reasonSelect');
+    const intakeFields = document.getElementById('intakeFields');
+    const standardFields = document.getElementById('standardFields');
+    const childAgeInput = document.getElementById('childAge');
+    const contactMethodSelect = document.getElementById('contactMethod');
+    const subjectInput = contactForm.querySelector('input[name="subject"]');
+
+    // Handle intake form conditional display
+    if (reasonSelect) {
+      reasonSelect.addEventListener('change', () => {
+        const isIntake = reasonSelect.value.includes('New Client Intake');
+        if (intakeFields && standardFields) {
+          intakeFields.style.display = isIntake ? 'block' : 'none';
+          standardFields.style.display = isIntake ? 'none' : 'block';
+        }
+        // Update subject based on reason
+        if (subjectInput) {
+          subjectInput.value = isIntake
+            ? 'New Client Intake Inquiry (Ages 0–4), Avanza ABA'
+            : 'New Contact Form Submission, Avanza ABA';
+        }
+        // Update required attributes
+        if (childAgeInput) childAgeInput.required = isIntake;
+        if (contactMethodSelect) contactMethodSelect.required = isIntake;
+      });
+    }
+
+    // Age validation for intake
+    if (childAgeInput) {
+      childAgeInput.addEventListener('blur', () => {
+        if (intakeFields.style.display !== 'none') {
+          const age = parseInt(childAgeInput.value, 10);
+          if (childAgeInput.value && (isNaN(age) || age < 0 || age >= 5)) {
+            childAgeInput.setCustomValidity(IS_ES ? 'El niño debe tener menos de 5 años' : 'Child must be under 5 years old');
+          } else {
+            childAgeInput.setCustomValidity('');
+          }
+        }
+      });
+    }
+
     contactForm.addEventListener('submit', async e => {
       e.preventDefault();
       const btn = contactForm.querySelector('[type="submit"]');
       const originalText = btn.textContent;
+
+      // Validate intake-specific fields if intake form is shown
+      if (intakeFields && intakeFields.style.display !== 'none') {
+        if (!childAgeInput.value) {
+          childAgeInput.focus();
+          childAgeInput.setCustomValidity(IS_ES ? 'Por favor ingrese la edad del niño' : 'Please enter child\'s age');
+          childAgeInput.reportValidity();
+          return;
+        }
+        const age = parseInt(childAgeInput.value, 10);
+        if (isNaN(age) || age < 0 || age >= 5) {
+          childAgeInput.setCustomValidity(IS_ES ? 'El niño debe tener menos de 5 años' : 'Child must be under 5 years old');
+          childAgeInput.reportValidity();
+          return;
+        }
+      }
 
       btn.textContent = IS_ES ? 'Enviando…' : 'Sending…';
       btn.disabled = true;
@@ -86,6 +143,13 @@
           btn.textContent = IS_ES ? '¡Mensaje Enviado! ✓' : 'Message Sent! ✓';
           btn.style.background = 'linear-gradient(135deg,#1BAF8A,#48B8E8)';
           contactForm.reset();
+          // Reset conditional display
+          if (intakeFields && standardFields && reasonSelect) {
+            intakeFields.style.display = 'none';
+            standardFields.style.display = 'block';
+            reasonSelect.value = '';
+            subjectInput.value = 'New Contact Form Submission, Avanza ABA';
+          }
           setTimeout(() => {
             btn.textContent = originalText;
             btn.disabled = false;

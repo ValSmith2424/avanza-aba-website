@@ -95,9 +95,10 @@
         </div>
         <div class="form-field">
           <label>Motivo del Contacto</label>
-          <select name="reason">
+          <select name="reason" id="reasonSelect">
             <option value="">Seleccionar...</option>
             <option>Programar una consulta gratuita</option>
+            <option>Comenzar Servicios de ABA (Ingreso de Nuevo Cliente, Edades 0–4)</option>
             <option>Pregunta sobre seguro / beneficios</option>
             <option>Conocer más sobre los servicios</option>
             <option>Referido de un proveedor</option>
@@ -105,33 +106,51 @@
             <option>Otro</option>
           </select>
         </div>
-        <div class="form-field"><label for="service_for">¿Para quién busca servicios?</label>
-          <select id="service_for" name="service_for">
-            <option value="">Seleccionar...</option>
-            <option>Mi hijo/a (menor de 12 años)</option>
-            <option>Mi adolescente (13–17 años)</option>
-            <option>Un adulto (18+)</option>
-            <option>Para mí mismo/a</option>
-            <option>Varios miembros de la familia</option>
-          </select>
+
+        <!-- NEW CLIENT INTAKE FIELDS (conditional) -->
+        <div id="intakeFields" style="display:none;">
+          <div class="form-field"><label>Edad del Niño/a <span class="req">*</span></label><input type="number" id="childAge" name="child_age" min="0" max="4" placeholder="0" autocomplete="off" aria-label="Edad del niño/a en años"/><small style="color:rgba(255,255,255,0.5);display:block;margin-top:0.25rem;">Debe ser menor de 5 años</small></div>
+          <div class="form-field"><label>Forma Preferida de Contacto <span class="req">*</span></label>
+            <select id="contactMethod" name="contact_method" required aria-label="Forma preferida para comunicarse">
+              <option value="">Seleccionar...</option>
+              <option>Llamada telefónica</option>
+              <option>Correo electrónico</option>
+              <option>Mensaje de texto</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Comentarios o Preguntas Adicionales</label><textarea name="intake_comments" id="intakeComments" placeholder="Cuéntanos sobre tu hijo/a, cualquier inquietud o preguntas que te gustaría discutir..." aria-label="Información adicional opcional"></textarea></div>
         </div>
-        <div class="form-field">
-          <label>Proveedor de Seguro</label>
-          <select name="insurance">
-            <option value="">Seleccionar...</option>
-            <option>Blue Cross Blue Shield of AZ</option>
-            <option>Anthem</option>
-            <option>TriWest / Tricare</option>
-            <option>Aetna</option>
-            <option>AHCCCS / Medicaid</option>
-            <option>Mercy Care</option>
-            <option>AZ Complete Health</option>
-            <option>Pago privado</option>
-            <option>ESA (Beca de Empoderamiento)</option>
-            <option>Otro</option>
-          </select>
+
+        <!-- STANDARD CONTACT FIELDS (hidden for intake) -->
+        <div id="standardFields">
+          <div class="form-field"><label for="service_for">¿Para quién busca servicios?</label>
+            <select id="service_for" name="service_for">
+              <option value="">Seleccionar...</option>
+              <option>Mi hijo/a (menor de 12 años)</option>
+              <option>Mi adolescente (13–17 años)</option>
+              <option>Un adulto (18+)</option>
+              <option>Para mí mismo/a</option>
+              <option>Varios miembros de la familia</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Proveedor de Seguro</label>
+            <select name="insurance">
+              <option value="">Seleccionar...</option>
+              <option>Blue Cross Blue Shield of AZ</option>
+              <option>Anthem</option>
+              <option>TriWest / Tricare</option>
+              <option>Aetna</option>
+              <option>AHCCCS / Medicaid</option>
+              <option>Mercy Care</option>
+              <option>AZ Complete Health</option>
+              <option>Pago privado</option>
+              <option>ESA (Beca de Empoderamiento)</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Mensaje</label><textarea name="message" placeholder="Cuéntanos sobre tus necesidades, preguntas o cómo podemos ayudarte..."></textarea></div>
         </div>
-        <div class="form-field"><label>Mensaje</label><textarea name="message" placeholder="Cuéntanos sobre tus necesidades, preguntas o cómo podemos ayudarte..."></textarea></div>
         <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;justify-content:center;">Enviar Mensaje</button>
         <p style="font-size:0.74rem;color:rgba(255,255,255,0.4);text-align:center;margin-top:0.5rem;">🔒 Tu información es privada y está protegida.</p>
       </form>
