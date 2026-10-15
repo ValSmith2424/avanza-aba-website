@@ -77,12 +77,45 @@
         // Update subject based on reason
         if (subjectInput) {
           subjectInput.value = isIntake
-            ? 'New Client Intake Inquiry (Ages 0–4), Avanza ABA'
+            ? 'New Client Intake Inquiry, Avanza ABA'
             : 'New Contact Form Submission, Avanza ABA';
         }
         // Update required attributes
         if (childAgeInput) childAgeInput.required = isIntake;
         if (contactMethodSelect) contactMethodSelect.required = isIntake;
+      });
+    }
+
+    // Handle conditional age fields based on "Who are you seeking services for?"
+    const serviceForSelect = document.getElementById('service_for');
+    if (serviceForSelect) {
+      const ageFieldUnder12 = document.getElementById('ageFieldUnder12');
+      const ageFieldTeen = document.getElementById('ageFieldTeen');
+      const ageFieldAdult = document.getElementById('ageFieldAdult');
+      const ageUnder12 = document.getElementById('ageUnder12');
+      const ageTeen = document.getElementById('ageTeen');
+      const ageAdult = document.getElementById('ageAdult');
+      const ageNA = document.getElementById('ageNA');
+
+      serviceForSelect.addEventListener('change', () => {
+        const selection = serviceForSelect.value;
+        // Hide all age fields first
+        if (ageFieldUnder12) ageFieldUnder12.style.display = 'none';
+        if (ageFieldTeen) ageFieldTeen.style.display = 'none';
+        if (ageFieldAdult) ageFieldAdult.style.display = 'none';
+        // Reset required attributes
+        if (ageUnder12) ageUnder12.required = false;
+        if (ageTeen) ageTeen.required = false;
+
+        if (selection.includes('under 12')) {
+          if (ageFieldUnder12) ageFieldUnder12.style.display = 'block';
+          if (ageUnder12) ageUnder12.required = true;
+        } else if (selection.includes('13–17')) {
+          if (ageFieldTeen) ageFieldTeen.style.display = 'block';
+          if (ageTeen) ageTeen.required = true;
+        } else if (selection.includes('18+')) {
+          if (ageFieldAdult) ageFieldAdult.style.display = 'block';
+        }
       });
     }
 

@@ -113,7 +113,7 @@
           <select name="reason" id="reasonSelect">
             <option value="">Select...</option>
             <option>Schedule a free consultation</option>
-            <option>Get Started with ABA Services (New Client Intake, Ages 0–4)</option>
+            <option>Get Started with ABA Services (New Client Intake)</option>
             <option>Insurance / benefits question</option>
             <option>Learn more about services</option>
             <option>Referral from a provider</option>
@@ -144,6 +144,17 @@
               <option>My child (under 12)</option><option>My teenager (13–17)</option>
               <option>An adult (18+)</option><option>Myself</option><option>Multiple family members</option>
             </select>
+          </div>
+
+          <!-- CONDITIONAL AGE FIELDS -->
+          <div id="ageFieldUnder12" style="display:none;">
+            <div class="form-field"><label>Child's Age <span class="req">*</span></label><input type="number" id="ageUnder12" name="age_under_12" min="0" max="11" placeholder="e.g. 5" required aria-label="Child's age in years"/></div>
+          </div>
+          <div id="ageFieldTeen" style="display:none;">
+            <div class="form-field"><label>Teen's Age <span class="req">*</span></label><input type="number" id="ageTeen" name="age_teen" min="13" max="17" placeholder="e.g. 15" required aria-label="Teen's age in years"/></div>
+          </div>
+          <div id="ageFieldAdult" style="display:none;">
+            <div class="form-field"><label>Age</label><input type="number" id="ageAdult" name="age_adult" min="18" placeholder="18+" aria-label="Age in years"/><div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;"><input type="checkbox" id="ageNA" name="age_prefer_not_disclose" aria-label="Prefer not to disclose age"/><label for="ageNA" style="margin:0;font-size:0.88rem;">Prefer not to disclose</label></div></div>
           </div>
           <div class="form-field">
             <label>Insurance Provider</label>
