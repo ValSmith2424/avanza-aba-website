@@ -126,7 +126,8 @@
           <div class="form-field"><label for="service_for">¿Para quién busca servicios?</label>
             <select id="service_for" name="service_for">
               <option value="">Seleccionar...</option>
-              <option>Mi hijo/a (menor de 12 años)</option>
+              <option>Mi hijo/a (menor de 5 años)</option>
+              <option>Mi hijo/a (5-12 años)</option>
               <option>Mi adolescente (13–17 años)</option>
               <option>Un adulto (18+)</option>
               <option>Para mí mismo/a</option>
@@ -135,8 +136,11 @@
           </div>
 
           <!-- CONDITIONAL AGE FIELDS -->
-          <div id="ageFieldUnder12" style="display:none;">
-            <div class="form-field"><label>Edad del Niño/a <span class="req">*</span></label><input type="number" id="ageUnder12" name="age_under_12" min="0" max="11" placeholder="ej. 5" required aria-label="Edad del niño/a en años"/></div>
+          <div id="ageFieldUnder5" style="display:none;">
+            <div class="form-field"><label>Edad del Niño/a <span class="req">*</span></label><input type="number" id="ageUnder5" name="age_under_5" min="0" max="4" placeholder="ej. 3" required aria-label="Edad del niño/a en años"/></div>
+          </div>
+          <div id="ageField5to12" style="display:none;">
+            <div class="form-field"><label>Edad del Niño/a <span class="req">*</span></label><input type="number" id="age5to12" name="age_5_to_12" min="5" max="12" placeholder="ej. 8" required aria-label="Edad del niño/a en años"/></div>
           </div>
           <div id="ageFieldTeen" style="display:none;">
             <div class="form-field"><label>Edad del Adolescente <span class="req">*</span></label><input type="number" id="ageTeen" name="age_teen" min="13" max="17" placeholder="ej. 15" required aria-label="Edad del adolescente en años"/></div>

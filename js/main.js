@@ -89,10 +89,12 @@
     // Handle conditional age fields based on "Who are you seeking services for?"
     const serviceForSelect = document.getElementById('service_for');
     if (serviceForSelect) {
-      const ageFieldUnder12 = document.getElementById('ageFieldUnder12');
+      const ageFieldUnder5 = document.getElementById('ageFieldUnder5');
+      const ageField5to12 = document.getElementById('ageField5to12');
       const ageFieldTeen = document.getElementById('ageFieldTeen');
       const ageFieldAdult = document.getElementById('ageFieldAdult');
-      const ageUnder12 = document.getElementById('ageUnder12');
+      const ageUnder5 = document.getElementById('ageUnder5');
+      const age5to12 = document.getElementById('age5to12');
       const ageTeen = document.getElementById('ageTeen');
       const ageAdult = document.getElementById('ageAdult');
       const ageNA = document.getElementById('ageNA');
@@ -100,16 +102,21 @@
       serviceForSelect.addEventListener('change', () => {
         const selection = serviceForSelect.value;
         // Hide all age fields first
-        if (ageFieldUnder12) ageFieldUnder12.style.display = 'none';
+        if (ageFieldUnder5) ageFieldUnder5.style.display = 'none';
+        if (ageField5to12) ageField5to12.style.display = 'none';
         if (ageFieldTeen) ageFieldTeen.style.display = 'none';
         if (ageFieldAdult) ageFieldAdult.style.display = 'none';
         // Reset required attributes
-        if (ageUnder12) ageUnder12.required = false;
+        if (ageUnder5) ageUnder5.required = false;
+        if (age5to12) age5to12.required = false;
         if (ageTeen) ageTeen.required = false;
 
-        if (selection.includes('under 12')) {
-          if (ageFieldUnder12) ageFieldUnder12.style.display = 'block';
-          if (ageUnder12) ageUnder12.required = true;
+        if (selection.includes('under 5')) {
+          if (ageFieldUnder5) ageFieldUnder5.style.display = 'block';
+          if (ageUnder5) ageUnder5.required = true;
+        } else if (selection.includes('5-12')) {
+          if (ageField5to12) ageField5to12.style.display = 'block';
+          if (age5to12) age5to12.required = true;
         } else if (selection.includes('13–17')) {
           if (ageFieldTeen) ageFieldTeen.style.display = 'block';
           if (ageTeen) ageTeen.required = true;
